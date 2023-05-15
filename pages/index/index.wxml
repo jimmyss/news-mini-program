@@ -1,4 +1,21 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  Weixin
+  <view class="header">
+    <image class="back-icon" src="images/back.png" bindtap="goBack"></image>
+    <text class="title">新闻详情</text>
+  </view>
+  <view class="content">
+    <!-- 新闻内容 -->
+    <image class="news-image" src="{{news.image}}"></image>
+    <view class="news-info">
+      <text class="news-title">{{news.title}}</text>
+      <text class="news-time">{{news.time}}</text>
+    </view>
+    <text class="news-content">{{news.content}}</text>
+  </view>
+  <view class="footer">
+    <button class="comment-btn" bindtap="goToComment">评论</button>
+    <button class="favorite-btn" bindtap="toggleFavorite">{{isFavorite ? '取消收藏' : '收藏'}}</button>
+    <button class="share-btn" bindtap="shareToWechat">分享</button>
+  </view>
 </view>
