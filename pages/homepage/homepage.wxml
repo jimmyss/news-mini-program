@@ -1,2 +1,25 @@
-<!--pages/homepage/homepage.wxml-->
-<text>pages/homepage/homepage.wxml</text>
+<!-- home.wxml -->
+<view class="news-list">
+  <!-- 使用 wx:for 循环遍历新闻列表 -->
+  <block wx:for="{{newsList}}" wx:key="index">
+    <!-- 每个新闻项 -->
+    <view class="news-item">
+      <view class="news-item-left">
+        <!-- 新闻图片 -->
+        <image class="news-image" src="{{item.picPath}}"></image>
+      </view>
+      <view class="news-item-right">
+        <!-- 新闻标题 -->
+        <view class="news-title">{{item.title}}</view>
+        <view class="news-details">
+          <!-- 新闻作者 -->
+          <view class="news-author">{{item.author}}</view>
+          <!-- 新闻发布时间 -->
+          <view class="news-time">{{item.time}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 添加分割线 -->
+    <view class="news-divider"></view>
+  </block>
+</view>
