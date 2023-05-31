@@ -491,7 +491,7 @@ app.get('/api/homepage/load', (req, res)=>{
     const endIndex2=endIndex%80;
     const newsData=data.newsList.slice(startIndex, endIndex1);
     const finalData=newsData.concat(data.newsList.slice(startIndex2, endIndex2));
-    res.json({news:finalData,pageNum:new_pageNumber, bios:bios});
+    res.json({news:finalData,pageNum:pageNumber, bios:bios});
   }
   else{
     const newsData=data.newsList.slice(startIndex, endIndex);
