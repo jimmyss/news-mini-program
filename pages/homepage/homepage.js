@@ -9,6 +9,7 @@ Page({
     pageSize:10,
     newsList:[],
     bios:0,
+    clickId:0,
   },
   
 
@@ -100,7 +101,6 @@ Page({
       },
     });
   },
-  
 
   loadNews(){//监听界面加载初始新闻列表
     const { newsList, pageNum, bios } = this.data;
@@ -116,6 +116,28 @@ Page({
           bios:b
         });
       },
+    });
+  },
+
+  handleNewsClick(event){
+    const index = event.currentTarget.dataset.index; // 获取点击的新闻序号
+    const pageNum=this.data.pageNum;
+    const bios=this.data.bios;
+    // 调用后端接口发送新闻序号
+    wx.request({
+      url: 'http://127.0.0.1:3000/api/detail',
+      method: 'POST',
+      data: {
+        index: index,
+        pageNum:pageNum,
+        bios:bios
+      },
+      success: (res) => {
+        console.log('点击新闻成功:', res);
+      },
+      fail: (err) => {
+        console.error('点击新闻失败:', err);
+      }
     });
   },
 
