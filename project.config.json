@@ -1,7 +1,7 @@
 {
-  "appid": "wxf3613141c34d50d6",
+  "appid": "touristappid",
   "compileType": "miniprogram",
-  "libVersion": "2.32.0",
+  "libVersion": "2.30.3",
   "packOptions": {
     "ignore": [],
     "include": []

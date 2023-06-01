@@ -1,13 +1,32 @@
 {
-    "pages": [
-        "pages/index/index"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
-        "navigationBarTextStyle": "black"
-    },
-    "style": "v2",
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/index/index",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff9000",
+    "navigationBarTitleText": "新闻精选",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#ff9000",
+    "borderStyle":"white",
+    "list": [{
+      "selectedIconPath": "/image/home_on.png",
+      "iconPath": "/image/home_off.png",
+      "pagePath": "pages/homepage/homepage",
+      "text": "首页"
+    }, {
+      "selectedIconPath": "/image/user_on.png",
+      "iconPath": "/image/user_off.png",
+      "pagePath": "pages/user/user",
+      "text": "我的"
+    }],
+    "enablePullDownRefresh": true
+  }
 }
