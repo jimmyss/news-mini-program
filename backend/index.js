@@ -438,6 +438,8 @@ let data={
 }
 
 const express = require('express')
+const axios=require('axios');
+const cheerio = require('cheerio');
 const bodyParser = require('body-parser')
 const app = express()
 app.use(bodyParser.json())
@@ -526,6 +528,16 @@ app.get('/api/homepage/pull', (req, res)=>{
     res.json({news:newsData,pageNum:new_pageNumber});
   }
 })
+
+//获取新闻内容
+app.post('/api/detail', async(req, res)=>{
+  const{index}=req.query;
+  const{pageNum}=req.query;
+  const{bios}=req.bios;
+  const pageNumber=parseInt(index);
+  console.log(pageNumber);
+})
+
 
 
 // 启动服务器
