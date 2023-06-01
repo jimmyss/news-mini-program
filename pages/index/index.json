@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "tabBar": "../components/tabbar/tabbar"
+  },
+  "navigationStyle": "default"
 }

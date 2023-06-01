@@ -1,96 +1,58 @@
 /* index.wxss */
 .container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 88rpx;
-  padding: 0 24rpx;
-  background-color: #f5f5f5;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
-}
-
-.back-icon {
-  width: 40rpx;
-  height: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-  margin-left: 20rpx;
-  font-size: 32rpx;
-  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.date {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.image {
+  margin-top: 10px;
+  width: 30%;
 }
 
 .content {
-  flex: 1;
-  padding: 24rpx;
-  margin-top: 88rpx;
-  text-align: left; /* 新增此行 */
+  margin-top: 20px;
+  padding: 10px;
 }
 
-.news-image {
-  width: 100%;
-  height: 400rpx;
-  margin-bottom: 24rpx;
-}
-
-.news-info {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 24rpx;
-}
-
-.news-title {
-  font-size: 36rpx;
-  font-weight: bold;
-  margin-bottom: 16rpx;
-}
-
-.news-time {
-  font-size: 28rpx;
-  color: #888;
-}
-
-.news-content {
-  font-size: 32rpx;
-  line-height: 48rpx;
-  color: #333;
-}
-
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 100rpx;
-  padding: -15 20rpx; /* 调整左右边距 */
-  background-color: #f5f5f5;
+.bottom-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
-.comment-btn,
-.favorite-btn,
-.share-btn {
-  margin-left: 10rpx; /* 调整左边距为10rpx */
-  padding: 0 16rpx;
-  height: 60rpx;
-  line-height: 60rpx;
-  font-size: 28rpx;
-  background-color: #fff;
-  border: 1rpx solid #999;
-  border-radius: 30rpx;
-  color: #333;
+.bottom-icon {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+}
+
+.center-icon {
+  font-size: 24px;
 }
