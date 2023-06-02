@@ -1,16 +1,26 @@
 // index.js
 Page({
+
+  data:{
+      title:'',
+      date:'',
+      url:'',
+      imagePath:'',
+      author:''
+  },
+
   onLoad(options) {
     // 获取 URL 参数
-    const params = options;
+    const params =options;
     // 解析 URL 参数并更新页面内容
     this.setData({
-      title: params.title || '',
-      date: params.time || '',
-      // content: params.content || '',\
-      content: '',
-      imagePath: params.picPath || ''
+      title: decodeURIComponent(params.title) || '',
+      date: decodeURIComponent(params.time) || '',
+      url: decodeURIComponent(params.url) || '',
+      imagePath: decodeURIComponent(params.image) || '',
+      author:decodeURIComponent(params.author)
     });
+    console.log(this.data);
   },
   navigateToIndex: function(event) {
     const index = event.currentTarget.dataset.index;

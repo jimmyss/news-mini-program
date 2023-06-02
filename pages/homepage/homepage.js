@@ -129,19 +129,23 @@ Page({
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
       method: 'POST',
+      header:{
+        'content-type': 'application/json'
+      },
       data: {
         index: index,
         pageNum:pageNum,
         bios:bios
       },
       success: (res) => {
-        console.log('点击新闻成功:', res);
+        //console.log('点击新闻成功:', res.data);
+        const send=res.data;
         wx.navigateTo({
-          // url: '/pages/index/index?title=' + encodeURIComponent(news.title) +
-          //      '&date=' + encodeURIComponent(news.time) +
-          //      '&image=' + encodeURIComponent(news.picPath) +
-          //      '&content=' + encodeURIComponent(news.author)
-          url: '/pages/index/index'
+          url: '/pages/index/index?title=' + encodeURIComponent(send.news.title) +
+               '&date=' + encodeURIComponent(send.news.time) +
+               '&image=' + encodeURIComponent(send.news.picPath) +
+               '&author=' + encodeURIComponent(send.news.author) +
+               '&url='+ encodeURIComponent(send.news.url)
         });
       },
       fail: (err) => {
