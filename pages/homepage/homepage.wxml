@@ -3,7 +3,7 @@
   <!-- 使用 wx:for 循环遍历新闻列表 -->
   <block wx:for="{{newsList}}" wx:key="index">
     <!-- 每个新闻项 -->
-    <view class="news-item" bind:tap="navigateToIndex">
+    <view class="news-item" bind:tap="navigateToIndex" data-index="{{index}}">
       <view class="news-item-left">
         <!-- 新闻图片 -->
         <image class="news-image" src="{{item.picPath}}"></image>
