@@ -4,13 +4,13 @@
     <list default="true" id="34d5cb0a-458a-4223-8c97-adb0eda22b0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/homepage/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/homepage/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/homepage/homepage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/homepage/homepage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/homepage/homepage.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/homepage/homepage.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pages/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/user/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pages/user/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/user/user.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pages/user/user.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/user/user.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pages/user/user.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/user/user.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../project.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project.private.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../project.private.config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,8 @@
       <workItem from="1685796186572" duration="5653000" />
       <workItem from="1685801991882" duration="209000" />
       <workItem from="1685803681521" duration="764000" />
+      <workItem from="1685806106987" duration="11000" />
+      <workItem from="1685806319144" duration="121000" />
     </task>
     <servers />
   </component>
