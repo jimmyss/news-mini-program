@@ -125,6 +125,7 @@ Page({
     const pageNum=this.data.pageNum;
     const bios=this.data.bios;
     const news = this.data.newsList[index];
+    const picPath = news.picPath;
     // 调用后端接口发送新闻序号
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
@@ -138,14 +139,18 @@ Page({
         bios:bios
       },
       success: (res) => {
-        //console.log('点击新闻成功:', res.data);
+        // console.log('点击新闻成功:', res.data);
         const send=res.data;
+        const num=index+1
+        // const imagPath="../homepage/images/new"+num+".png";
+        console.log(send);
         wx.navigateTo({
           url: '/pages/index/index?title=' + encodeURIComponent(send.news.title) +
                '&date=' + encodeURIComponent(send.news.time) +
-               '&image=' + encodeURIComponent(send.news.picPath) +
+               '&image=' + encodeURIComponent(picPath) +
                '&author=' + encodeURIComponent(send.news.author) +
-               '&url='+ encodeURIComponent(send.news.url)
+               '&url='+ encodeURIComponent(send.news.url) +
+               '&content=' + encodeURIComponent(send.content)
         });
       },
       fail: (err) => {

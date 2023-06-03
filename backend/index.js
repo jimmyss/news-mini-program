@@ -637,6 +637,7 @@ app.post('/api/detail', async(req, res)=>{
   const newsIndex_2=newsIndex_1%80;
   var newsInfo=data.newsList[newsIndex_2];
   const newsContent=await fetchNewsContent(newsInfo.url);
+  console.log(newsContent)
   //根据newsInfo中的新闻url链接获取对应链接的新闻正文内容
   res.json({news:newsInfo, content:newsContent});
 })

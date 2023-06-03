@@ -1,34 +1,26 @@
 // index.js
 Page({
-
-  data:{
-      title:'',
-      date:'',
-      url:'',
-      imagePath:'',
-      author:''
+  data: {
+    title: '',       // 新闻标题
+    date: '',        // 新闻日期
+    url: '',         // 新闻链接
+    imagePath: '',   // 新闻图片路径
+    author: '',      // 新闻作者
+    content: ''      // 新闻内容
   },
-
   onLoad(options) {
     // 获取 URL 参数
-    const params =options;
-    // 解析 URL 参数并更新页面内容
+    const params = options;
     this.setData({
       title: decodeURIComponent(params.title) || '',
-      date: decodeURIComponent(params.time) || '',
+      date: decodeURIComponent(params.date) || '',
       url: decodeURIComponent(params.url) || '',
       imagePath: decodeURIComponent(params.image) || '',
-      author:decodeURIComponent(params.author)
+      author: decodeURIComponent(params.author) || '',
+      content: decodeURIComponent(params.content) || ''
     });
-    console.log(this.data);
+    // console.log(decodeURIComponent(params.image));
   },
-  navigateToIndex: function(event) {
-    const index = event.currentTarget.dataset.index;
-    const news = JSON.stringify(this.data.newsList[index]);
-    wx.navigateTo({
-      url: '/pages/index/index?news=' + encodeURIComponent(news)
-    });
-  },  
   navigateToPage1: function() {
     // 跳转到页面1的逻辑
   },
