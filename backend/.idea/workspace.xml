@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34d5cb0a-458a-4223-8c97-adb0eda22b0f" name="Changes" comment="" />
+    <list default="true" id="34d5cb0a-458a-4223-8c97-adb0eda22b0f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/user/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/user/user.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/user/user.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/user/user.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/user/user.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../pages/user/user.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project.private.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../project.private.config.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QYN1EN67uio9F10b3Hqx07NeG9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -32,10 +48,24 @@
       <updated>1685526338445</updated>
       <workItem from="1685526339837" duration="26000" />
       <workItem from="1685776981459" duration="4885000" />
+      <workItem from="1685796186572" duration="5653000" />
+      <workItem from="1685801991882" duration="209000" />
+      <workItem from="1685803681521" duration="764000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
