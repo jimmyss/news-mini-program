@@ -701,11 +701,13 @@ app.get('/api/favorite/load', (req, res)=>{
         const endIndex2=endIndex%80;
         const newsData=data.favoritesList.slice(startIndex, endIndex1);
         const finalData=newsData.concat(data.favoritesList.slice(startIndex2, endIndex2));
-        res.json({news:finalData,pageNum:pageNum, bios:bios});
+        const num = finalData.length;
+        res.json({news:finalData,pageNum:pageNum, bios:bios,num:num});
     }
     else{
         const newsData=data.favoritesList.slice(startIndex, endIndex);
-        res.json({news:newsData,pageNum:pageNum, bios:bios});
+        const num = newsData.length;
+        res.json({news:newsData,pageNum:pageNum, bios:bios,num:num});
     }
 })
 

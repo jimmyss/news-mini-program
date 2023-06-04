@@ -71,7 +71,7 @@ Page({
         const newsData = res.data.news;
         const pNum=res.data.pageNum;
         const b=res.data.bios;
-        const n =Object.keys(res.data.news).length;
+        const n =res.data.num;
         this.setData({
           newsList: newsData,
           pageNum: pNum,

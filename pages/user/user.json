@@ -1,6 +1,5 @@
 {
   "usingComponents": {},
-  "enablePullDownRefresh": true,
   "navigationBarTitleText": "Favorite",
-  "onReachBottomDistance": 50
+  "enablePullDownRefresh": true
 }
