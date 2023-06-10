@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "newsDetail/newsDetail",
+    "news-cmt/news-cmt"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  
+  "sitemapLocation": "sitemap.json"
+}
