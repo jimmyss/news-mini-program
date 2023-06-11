@@ -22,12 +22,13 @@ Page({
     // console.log(decodeURIComponent(params.image));
   },
   navigateToPage1: function() {
+    //console.log(12323);
     // 跳转到页面1的逻辑
-    /*const title=this.data.title;
-    const time=this.data.date;
-    const picPath=this.data.imagePath;
-    const author=this.data.author;
-    const url=this.data.url;
+   // const title=this.data.title;
+    //const time=this.data.date;
+    //const picPath=this.data.imagePath;
+    //const author=this.data.author;
+   // const url=this.data.url;
     wx.request({
       url: 'http://127.0.0.1:8080/api/favorite/add',
       method: 'POST',
@@ -35,13 +36,13 @@ Page({
         'content-type': 'application/json'
       },
       data:{
-        title:title,
-        time:time,
-        picPath:picPath,
-        author:author,
-        url:url,
-      
-    });}*/
+        title:this.data.title,
+        time:this.data.date,
+        picPath:this.data.imagePath,
+        author:this.data.author,
+        url:this.data.url,
+      }
+    })
   },
   navigateToPage2: function() {
     // 跳转到页面2的逻辑

@@ -513,32 +513,10 @@ let data={
     pageNum:1,
     pageSize:10,
     totalPage:1,
-    favoritesList:[
-        {
-            title:'红星深度｜23只小熊猫之死：警方解救后寄养动物园 涉案野生动物救助待规范',
-            time:'2023-05-15',
-            picPath:'/pages/homepage/images/new1.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230515A09KKO00'
-        },
-        {
-            title:'曾荣立一等战功的战区上将司令员发声，透露最新信号！',
-            time:'2023-05-15',
-            picPath:'/pages/homepage/images/new2.png',
-            author:'政知见',
-            url:'https://new.qq.com/rain/a/20230531A05OAE00'
-        },
-        {
-            title:'山西10岁男孩失联身亡，嫌疑人系生母与继父 知情人：生母曾称是孩子偷钱挨打后跑了',
-            time:'2023-05-24',
-            picPath:'/pages/homepage/images/new3.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230524A041A700'
-        },
-    ],
-    favoritePageNum:1,
-    favoritePageSize:10,
-    favoriteTotalPage:1,
+    favoritesList: [],
+    favoritePageNum: 1,
+    favoritePageSize: 10,
+    favoriteTotalPage: 1
 }
 
 const express = require('express')
@@ -667,60 +645,73 @@ app.post('/api/detail', async(req, res)=>{
   res.json({news:newsInfo, content:newsContent});
 })
 
+
+var fs = require('fs');
+
 //获取新闻内容
 app.post('/api/detail/favorite', async(req, res)=>{
-    const{index, pageNum, bios}=req.body;
-    const pageNumber=parseInt(pageNum);
-    const ind=parseInt(index);
-    const b=parseInt(bios);
-    //得到具体新闻内容
-    const newsIndex_1=(pageNumber-1)*10+b+ind;
-    const newsIndex_2=newsIndex_1%80;
-    var newsInfo=data.favoritesList[newsIndex_2];
-    const newsContent=await fetchNewsContent(newsInfo.url);
-    //根据newsInfo中的新闻url链接获取对应链接的新闻正文内容
+    //const{index, pageNum, bios}=req.body;
+    const ind=parseInt(req.body.index);
+    console.log(ind);
+    const newsInfo = favoritesList[ind];
+    const newsContent= await fetchNewsContent(newsInfo.url);
     res.json({news:newsInfo, content:newsContent});
 })
 
 // 设置路由， 处理加载界面功能
 app.get('/api/favorite/load', (req, res)=>{
-    const pageSize=10;
-    const min=1;
-    const max=data.favoritesList.length/pageSize;
+    fs.readFile('favorites.json', 'utf-8', function (err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            const pageNum =1;
+            const bios =0;
+            const parsedData = JSON.parse(data);
+            const newsData= parsedData.favoritesList;
+            const num = newsData.length;
 
-    //生成页码和页内偏移量
-    const pageNum=Math.floor(Math.random()*(max-min+1))+min;
-    const bios=Math.floor(Math.random()*9);
-
-    //计算起始地址和结束地址
-    const startIndex=(pageNum-1)*pageSize+bios;
-    const endIndex=startIndex+pageSize;
-    if(endIndex>80){
-        const endIndex1=80;
-        const startIndex2=0;
-        const endIndex2=endIndex%80;
-        const newsData=data.favoritesList.slice(startIndex, endIndex1);
-        const finalData=newsData.concat(data.favoritesList.slice(startIndex2, endIndex2));
-        const num = finalData.length;
-        res.json({news:finalData,pageNum:pageNum, bios:bios,num:num});
-    }
-    else{
-        const newsData=data.favoritesList.slice(startIndex, endIndex);
-        const num = newsData.length;
-        res.json({news:newsData,pageNum:pageNum, bios:bios,num:num});
-    }
+            favoritesList = newsData;
+            //console.log(favoritesList);
+            res.json({news:newsData,pageNum:pageNum, bios:bios,num:num});
+        }
+    });
 })
 
 //获取新闻内容
-/*app.post('/api/favorite/add', async(req, res)=>{
-    const{tit,tim,pic,au,u}=req.body;
+app.post('/api/favorite/add', async(req, res)=>{
+    console.log('add');
+    fs.readFile('favorites.json', 'utf-8', function (err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            var favorList = JSON.parse(data);
+            var newfavor={
+                title:req.body.title,
+                time:req.body.time,
+                picPath:req.body.picPath,
+                author:req.body.author,
+                url:req.body.url,
+            }
+            //newfavor.record_id =(records.record.length + 1).toString();
+            favorList.favoritesList.push(newfavor);
+            console.log(favorList.favoritesList);
+            fs.writeFile('favorites.json',JSON.stringify(favorList, null, 2), (error) => {
+                if (error) {
+                    console.log(error);
+                }else{
+                    console.log('Data written successfully to disk');
+                }
+            });
+        }
+    });
+    //const{tit,tim,pic,au,u}=req.body;
     //const tit=JSON.parse(title);
     //const tim=JSON.parse(time);
     //const pic=JSON.parse(picPath);
     //const au=JSON.parse(author);
     //const u=JSON.parse(url);
-    data.favoritesList.append({'title':tit,'time':tim,'picPath':pic,'author':au,'url':u});
-})*/
+    //data.favoritesList.append({'title':tit,'time':tim,'picPath':pic,'author':au,'url':u});
+})
 
 // 启动服务器
 const port = 8080; // 设置服务器监听的端口号
