@@ -1,4 +1,23 @@
-<!--index.wxml-->
 <view class="container">
-  Weixin
+  <view class="header">
+    <text class="title">{{title}}</text>
+    <text class="date">{{date}}</text>
+  </view>
+  <image class="picImage" src="{{imagePath}}"></image>
+  <view class="content">
+    <text>{{content}}</text>
+  </view>
 </view>
+
+<view class="bottom-bar">
+  <view class="bottom-icon" bindtap="navigateToPage1">
+    <image class="image" src="/pages/index/images/收藏.png"mode="widthFix"></image>
+  </view>
+  <view class="bottom-icon" bindtap="navigateToPage2" src="">
+    <image class="image" src="/pages/index/images/分享.png"mode="widthFix"></image>
+  </view>
+  <view class="bottom-icon center-icon" bindtap="navigateToPage3">
+    <image class="image" src="/pages/index/images/评论.png"mode="widthFix"></image>
+  </view>
+</view>
+<!-- <tabBar idx="0"></tabBar> -->
