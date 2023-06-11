@@ -641,6 +641,7 @@ app.post('/api/detail', async(req, res)=>{
   const newsIndex_2=newsIndex_1%80;
   var newsInfo=data.newsList[newsIndex_2];
   const newsContent=await fetchNewsContent(newsInfo.url);
+  console.log(newsContent)
   //根据newsInfo中的新闻url链接获取对应链接的新闻正文内容
   res.json({news:newsInfo, content:newsContent});
 })
@@ -714,7 +715,7 @@ app.post('/api/favorite/add', async(req, res)=>{
 })
 
 // 启动服务器
-const port = 8080; // 设置服务器监听的端口号
+const port = 3000; // 设置服务器监听的端口号
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

@@ -55,7 +55,7 @@ Page({
   onPullDownRefresh(){
     const {newsList, pageNum, bios}=this.data;
     wx.request({
-      url: 'http://127.0.0.1:8080/api/homepage/pull',
+      url: 'http://127.0.0.1:3000/api/homepage/pull',
       data:{
         pageNum,
         bios
@@ -83,7 +83,7 @@ Page({
       title: '加载中...',
     });
     wx.request({
-      url: 'http://127.0.0.1:8080/api/homepage/bottom',
+      url: 'http://127.0.0.1:3000/api/homepage/bottom',
       data: {
         pageNum: pageNum,
         bios:bios
@@ -105,7 +105,7 @@ Page({
   loadNews(){//监听界面加载初始新闻列表
     const { newsList, pageNum, bios } = this.data;
     wx.request({
-      url: 'http://127.0.0.1:8080/api/homepage/load',
+      url: 'http://127.0.0.1:3000/api/homepage/load',
       success: res => {
         const newsData = res.data.news;
         const pNum=res.data.pageNum;
@@ -128,7 +128,7 @@ Page({
     const picPath = news.picPath;
     // 调用后端接口发送新闻序号
     wx.request({
-      url: 'http://127.0.0.1:8080/api/detail',
+      url: 'http://127.0.0.1:3000/api/detail',
       method: 'POST',
       header:{
         'content-type': 'application/json'
