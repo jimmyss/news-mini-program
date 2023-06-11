@@ -16,8 +16,8 @@
   <view class="bottom-icon" bindtap="navigateToPage2" src="">
     <image class="image" src="/pages/index/images/分享.png"mode="widthFix"></image>
   </view>
-  <view class="bottom-icon center-icon" bindtap="navigateToPage3">
-    <image class="image" src="/pages/index/images/评论.png"mode="widthFix"></image>
+  <view class="bottom-icon center-icon" bindtap="toComment">
+    <image class="image" src="/pages/index/images/评论.png"mode="widthFix" ></image>
   </view>
 </view>
 <!-- <tabBar idx="0"></tabBar> -->

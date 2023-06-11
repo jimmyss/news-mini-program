@@ -2,11 +2,13 @@
   "pages": [
     "pages/homepage/homepage",
     "pages/index/index",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/news-cmt/news-cmt",
+    "pages/newsDetail/newsDetail"
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#ff9000",
+    "navigationBarBackgroundColor": "#5677fc",
     "navigationBarTitleText": "新闻精选",
     "navigationBarTextStyle": "white"
   },
@@ -14,7 +16,7 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#a9b7b7",
-    "selectedColor": "#ff9000",
+    "selectedColor": "#5677fc",
     "borderStyle":"white",
     "list": [{
       "selectedIconPath": "/image/home_on.png",

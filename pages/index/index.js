@@ -30,7 +30,7 @@ Page({
     //const author=this.data.author;
    // const url=this.data.url;
     wx.request({
-      url: 'http://127.0.0.1:8080/api/favorite/add',
+      url: 'http://127.0.0.1:3000/api/favorite/add',
       method: 'POST',
       header:{
         'content-type': 'application/json'
@@ -49,5 +49,11 @@ Page({
   },
   navigateToPage3: function() {
     // 跳转到页面3的逻辑
+  },
+  toComment:function(){
+    console.log("oooooo")
+    wx.navigateTo({
+      url: '/pages/newsDetail/newsDetail',
+    })
   }
 })

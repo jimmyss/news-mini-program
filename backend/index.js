@@ -518,13 +518,63 @@ let data={
     favoritePageSize: 10,
     favoriteTotalPage: 1
 }
-
+const fs = require('fs');
+const filePath = './data/comments.json';
 const express = require('express')
 const axios=require('axios');
 const cheerio = require('cheerio');
 const bodyParser = require('body-parser')
 const app = express()
 app.use(bodyParser.json())
+
+//comment
+const loadComments = () => {
+  try {
+      const data = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(data);
+  } catch (error) {
+      // 如果文件不存在或读取失败，则返回空数组作为初始评论数据
+      return [];
+  }
+};
+// 保存评论数据
+const saveComments = (comments) => {
+  const cmtData = JSON.stringify(comments);
+  fs.writeFileSync(filePath, cmtData, 'utf8');
+};
+function initialize(){
+  cmtData = {
+      cmtList: loadComments(),
+  };
+}
+initialize()
+app.use(bodyParser.json())
+
+app.get('/api/comment', (req, res)=>{
+
+  console.log('111:', cmtData); // 在控制台输出更新的评论数据
+  res.json({cmtList:cmtData.cmtList});
+
+})
+
+app.post('/api/comment', (req, res) => {
+  // 接收前端发送的评论数据更新请求
+  const updatedCmtList = req.body.cmtList;
+  if (updatedCmtList) {
+
+      // 更新评论数据
+      cmtData.cmtList = updatedCmtList;
+      console.log('Received updatedCmtList:', updatedCmtList); // 在控制台输出更新的评论数据
+      saveComments(cmtData.cmtList);
+      // 返回更新成功的响应
+      res.json({ message: '评论数据更新成功' });
+
+  } else {
+      // 请求中未包含有效的评论数据
+      res.status(400).json({ error: '无效的请求数据' });
+  }
+});
+//end-comment
 
 async function fetchNewsContent(url) {
   try {
@@ -577,6 +627,7 @@ app.get('/api/homepage/bottom', (req, res) => {
 
 // 设置路由， 处理加载界面功能
 app.get('/api/homepage/load', (req, res)=>{
+  console.log(data)
   const pageSize=10;
   const min=1;
   const max=data.newsList.length/pageSize;
@@ -645,9 +696,6 @@ app.post('/api/detail', async(req, res)=>{
   //根据newsInfo中的新闻url链接获取对应链接的新闻正文内容
   res.json({news:newsInfo, content:newsContent});
 })
-
-
-var fs = require('fs');
 
 //获取新闻内容
 app.post('/api/detail/favorite', async(req, res)=>{
