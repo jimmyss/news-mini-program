@@ -5,7 +5,7 @@
     "pages/user/user"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ff9000",
     "navigationBarTitleText": "新闻精选",
     "navigationBarTextStyle": "white"
@@ -26,6 +26,7 @@
       "iconPath": "/image/user_off.png",
       "pagePath": "pages/user/user",
       "text": "我的"
-    }]
+    }],
+    "enablePullDownRefresh": true
   }
 }
