@@ -1,6 +1,6 @@
 <view class="container">
   <view>文章的内容。。。。。。</view>
-  
+
 
   <view class="tui-operate-box">
     <!-- 赞 -->
@@ -55,10 +55,10 @@
   </view>
 
   <view class="tui-operation">
-    <view class="tui-operation-left tui-col-7 tui-height-full tui-ptop-zero">
+    <view class="tui-operation-left">
       <view class="tui-btn-comment" bindtap="btnCmt">发表你的评论...</view>
     </view>
-    <view class="tui-operation-right tui-right-flex tui-col-5">
+    <view class="tui-operation-right tui-right-flex">
       <!-- 所有评论501 -->
       <view class="tui-operation-item" hover-class="opcity" hover-stay-time="150" bindtap="cmtAll">
         <tui-icon name="message" size="30" color='#444'></tui-icon>
@@ -66,13 +66,13 @@
       </view>
       <!-- 收藏 -->
       <view class="tui-operation-item" bindtap="collection">
-        <tui-icon name="{{isCollection?'star-fill':'star'}}" size="29" color="{{isCollection?'#5677fc':'#444'}}"></tui-icon>
+        <tui-icon name="{{isCollection?'star-fill':'star'}}" size="30" color="{{isCollection?'#5677fc':'#444'}}"></tui-icon>
       </view>
 
       <!-- 分享 -->
       <view class="tui-operation-item" hover-class="opcity" hover-stay-time="150">
         <button open-type="share" class="tui-share-btn">
-          <tui-icon name="share" size="31" color='#444'></tui-icon>
+          <tui-icon name="share" size="30" color='#444'></tui-icon>
         </button>
       </view>
     </view>
