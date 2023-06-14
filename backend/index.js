@@ -774,7 +774,7 @@ app.post('/api/favorite/add', async(req, res)=>{
 })
 
 // 启动服务器
-const port = 8080; // 设置服务器监听的端口号
+const port = 3000; // 设置服务器监听的端口号
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

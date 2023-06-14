@@ -43,7 +43,7 @@ Page({
   },
   addFavorite: function () {
     wx.request({
-      url: 'http://127.0.0.1:8080/api/favorite/add',
+      url: 'http://127.0.0.1:3000/api/favorite/add',
       method: 'POST',
       header: {
         'content-type': 'application/json'

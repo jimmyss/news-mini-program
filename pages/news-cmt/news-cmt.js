@@ -88,7 +88,7 @@ Page({
 
     // 向后端发送请求更新评论数据
     wx.request({
-      url: 'http://127.0.0.1:8080/api/comment',
+      url: 'http://127.0.0.1:3000/api/comment',
       method: 'POST',
       data: {
         cmtList: this.updatedCmtList
@@ -128,7 +128,7 @@ Page({
       updatedCmtList:[],
     });
     wx.request({
-      url: 'http://127.0.0.1:8080/api/comment',
+      url: 'http://127.0.0.1:3000/api/comment',
       success: res => {
         const cmt = res.data.cmtList;
         
