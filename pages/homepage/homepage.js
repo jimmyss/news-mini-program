@@ -203,7 +203,6 @@ Page({
       },
       success: (res) => {
         const send=res.data;
-        console.log(send);
         wx.navigateTo({
           url: '/pages/index/index?title=' +
                '&image=' + encodeURIComponent(picPath) +
