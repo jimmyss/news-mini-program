@@ -129,7 +129,7 @@ Page({
     });
   
     wx.request({
-      url: 'http://127.0.0.1:3000/api/comment',
+      url: 'http://127.0.0.1:8080/api/comment',
       success: res => {
         const cmt = res.data.cmtList;
         

@@ -66,7 +66,7 @@ Page({
   loadNews(){//监听界面加载初始新闻列表
     const { newsList, pageNum, bios } = this.data;
     wx.request({
-      url: 'http://127.0.0.1:3000/api/favorite/load',
+      url: 'http://127.0.0.1:8080/api/favorite/load',
       success: res => {
         const newsData = res.data.news;
         const pNum=res.data.pageNum;
@@ -90,7 +90,7 @@ Page({
     const picPath = news.picPath;
     // 调用后端接口发送新闻序号
     wx.request({
-      url: 'http://127.0.0.1:3000/api/detail/favorite',
+      url: 'http://127.0.0.1:8080/api/detail/favorite',
       method: 'POST',
       header:{
         'content-type': 'application/json'
