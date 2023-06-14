@@ -169,6 +169,7 @@ swiper, swiper-item {
 .news-time {
   font-size: 12px;
   color: #999;
+  margin-right: 10px;
 }
 
 .news-divider {

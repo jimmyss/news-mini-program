@@ -202,18 +202,14 @@ Page({
         bios:bios
       },
       success: (res) => {
-        // console.log('点击新闻成功:', res.data);
         const send=res.data;
-        const num=index+1
-        // const imagPath="../homepage/images/new"+num+".png";
         console.log(send);
         wx.navigateTo({
-          url: '/pages/index/index?title=' + encodeURIComponent(send.news.title) +
-               '&date=' + encodeURIComponent(send.news.time) +
+          url: '/pages/index/index?title=' +
                '&image=' + encodeURIComponent(picPath) +
-               '&author=' + encodeURIComponent(send.news.author) +
-               '&url='+ encodeURIComponent(send.news.url) +
-               '&content=' + encodeURIComponent(send.content)
+               '&index=' + encodeURIComponent(index) + 
+               '&pageNum=' + encodeURIComponent(pageNum) + 
+               '&bios=' + encodeURIComponent(bios)
         });
       },
       fail: (err) => {
