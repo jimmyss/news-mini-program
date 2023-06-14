@@ -518,6 +518,17 @@ let data={
     favoritePageSize: 10,
     favoriteTotalPage: 1
 }
+
+//链接数据库
+const mysql = require('mysql');
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'qewxs132',
+  database: 'test'
+});
+
+
 const fs = require('fs');
 const filePath = './data/comments.json';
 const express = require('express')
