@@ -44,9 +44,6 @@ Page({
       }
     })
   },
-  navigateToPage2: function() {
-    // 跳转到页面2的逻辑
-  },
   navigateToPage3: function() {
     // 跳转到页面3的逻辑
   },
