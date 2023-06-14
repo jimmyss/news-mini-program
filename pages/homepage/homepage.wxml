@@ -1,4 +1,37 @@
 <!-- home.wxml -->
+<!-- 引用外部icon -->
+<!-- 顶部导航栏 -->
+<view class="navbar-container">
+  <scroll-view class='navbar' scroll-x="true" scroll-left="{{scrollLeft}}">
+    <block wx:for='{{navbarTitleName}}' wx:key='{{item.nameID}}'>
+      <view id='{{item.nameID}}' data-id='{{item.nameID}}' data-url='{{item.nameUrl}}' data-newstype='{{item.newsType}}' class="navbar-item {{item.nameID == tapId? 'navbar-item-active':''}}" bindtap='navbarTitleClick' data-index='{{index}}'>
+        {{item.name}}
+      </view>
+    </block>
+  </scroll-view>
+  <image class="expand-icon" src="/pages/homepage/images/angle-down-solid.svg" mode="aspectFit" bindtap='expandAllColumns' />
+</view>
+<view class="nav-blank"></view>
+<!-- 包含所有栏目的标签的网格视图 -->
+<view class="drawer-screen" bindtap="expandAllColumns" data-status="close" wx:if="{{showColumnFlag}}"></view>
+<view class="all-columns-grid" wx:if="{{showColumnFlag}}">
+  <block wx:for="{{navbarTitleName}}" wx:key="{{item.nameID}}">
+    <view data-id="{{item.nameID}}" data-url="{{item.nameUrl}}" data-newstype="{{item.newsType}}" class="column-item {{item.nameID == tapId? 'column-item-active':''}}" bindtap="navbarTitleClick" data-index='{{index}}'>
+      {{item.name}}
+    </view>
+  </block>
+</view>
+<!-- 新闻轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:for-item="imgItem" wx:key="id">
+    <swiper-item>
+      <image class="slide-image" src="{{imgItem.src}}" mode="aspectFill"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="swiper-blank"></view>
+<!-- 新闻列表 -->
 <view class="news-list">
   <!-- 使用 wx:for 循环遍历新闻列表 -->
   <block wx:for="{{newsList}}" wx:key="index">

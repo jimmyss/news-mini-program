@@ -9,15 +9,39 @@ Page({
     pageSize:10,
     newsList:[],
     bios:0,
-    clickId:0,
+		clickId:0,
+		navbarTitleName: [
+      { name: '头条', nameID: '201701', newsType: 'top' },
+      { name: '军事', nameID: '201702', newsType: 'junshi' },
+      { name: '体育', nameID: '201703', newsType: 'tiyu' },
+      { name: '科技', nameID: '201704', newsType: 'keji' },
+      { name: '财经', nameID: '201705', newsType: 'caijing' },
+      { name: '社会', nameID: '201706', newsType: 'shehui' },
+      { name: '时尚', nameID: '201707', newsType: 'shishang' },
+      { name: '娱乐', nameID: '201708', newsType: 'yule' },
+		],
+		tapId:'',
+		showColumnFlag:false,
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+		duration: 1000,
+		imgUrls:[
+			{id:1, src:'/pages/homepage/images/new19.png'},
+			{id:2, src:'/pages/homepage/images/new20.png'},
+			{id:3, src:'/pages/homepage/images/new21.png'}
+		],
+
   },
-  
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad:function(options) {
-    this.loadNews();//调用loadNews函数加载新闻列表
+		this.loadNews();//调用loadNews函数加载新闻列表
+		this.setData({
+			tapId: this.data.navbarTitleName[0].nameID
+		})
   },
 
   /**
@@ -47,6 +71,45 @@ Page({
   onUnload() {
 
   },
+
+  expandAllColumns: function() {
+		this.setData({
+			showColumnFlag: !this.data.showColumnFlag
+		})
+	},
+	
+	navbarTitleClick:function(event){
+		//选择栏目
+		const index = event.currentTarget.dataset.index;
+		const nameId = this.data.navbarTitleName[index].nameID;
+		this.setData({
+			tapId: nameId,
+			showColumnFlag: false
+		}, () => {
+			// 在setData的回调函数中执行滚动逻辑
+			this.scrollToCenter(index);
+		});
+	},
+	
+	scrollToCenter: function (index) {
+		// 创建选择器查询对象
+		const query = wx.createSelectorQuery();
+		// 选择所有navbar-item元素
+		query.selectAll('.navbar-item').boundingClientRect();
+		query.exec((rects) => {
+			// 获取目标栏目的位置信息
+			const targetRect = rects[0][index];
+			// 计算滚动距离
+			const screenWidth = wx.getSystemInfoSync().windowWidth;
+			const scrollLeft = Math.max(targetRect.left - (screenWidth - targetRect.width) / 2, 0);
+	
+			// 滚动到指定位置
+			wx.pageScrollTo({
+				scrollLeft: scrollLeft,
+				duration: 300
+			});
+		});
+	},	
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
