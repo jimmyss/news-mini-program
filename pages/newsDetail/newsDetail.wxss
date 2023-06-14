@@ -233,6 +233,7 @@ page {
 .tui-operation-left {
   display: flex;
   align-items: center;
+  width: 70%;
 }
 
 .tui-operation-item {
@@ -242,12 +243,16 @@ page {
   justify-content: center;
   flex-direction: column;
   position: relative;
+  width: 20rpx;
 }
 
 .tui-operation-right {
   height: 100rpx;
   box-sizing: border-box;
   padding-top: 0;
+  width: 30%;
+  display: flex;
+  justify-content: right;
 }
 
 .tui-badge-class {
@@ -296,7 +301,9 @@ page {
 } */
 
 .tui-share-btn {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
   background: none;
   margin: 0;
   padding: 0;
