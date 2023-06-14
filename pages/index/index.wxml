@@ -10,14 +10,14 @@
 </view>
 
 <view class="bottom-bar">
-  <view class="bottom-icon" bindtap="navigateToPage1">
-    <image class="image" src="/pages/index/images/收藏.png"mode="widthFix"></image>
-  </view>
-  <view class="bottom-icon" bindtap="navigateToPage2" src="">
-    <image class="image" src="/pages/index/images/分享.png"mode="widthFix"></image>
-  </view>
-  <view class="bottom-icon center-icon" bindtap="toComment">
-    <image class="image" src="/pages/index/images/评论.png"mode="widthFix" ></image>
-  </view>
+  <button class="bottom-icon" bindtap="addFavorite">
+    <image class="image" src="/pages/index/images/star.png" mode="widthFix"></image>
+  </button>
+  <button open-type="share" class="bottom-icon">
+    <image class="image" src="/pages/index/images/分享.png" mode="widthFix"></image>
+  </button>
+  <button class="bottom-icon" bindtap="toComment">
+    <image class="image" src="/pages/index/images/评论.png" mode="widthFix"></image>
+  </button>
 </view>
 <!-- <tabBar idx="0"></tabBar> -->

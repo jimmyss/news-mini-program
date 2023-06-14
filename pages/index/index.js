@@ -21,7 +21,7 @@ Page({
     });
     // console.log(decodeURIComponent(params.image));
   },
-  navigateToPage1: function() {
+  addFavorite: function() {
     //console.log(12323);
     // 跳转到页面1的逻辑
    // const title=this.data.title;
