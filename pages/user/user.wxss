@@ -1,4 +1,26 @@
 /* pages/user/user.wxss */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #4285f4; /* 这是一种蓝色的hex值，你可以根据需要修改 */
+  padding: 20px 0;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* 这将使图片变为圆形 */
+}
+
+.username {
+  margin-top: 10px;
+  color: white; /* 设置用户名的颜色为白色 */
+  font-size: 20px; /* 设置字体大小 */
+}
+
 #news-list {
   min-height: 600rpx;
   padding: 15rpx;
@@ -21,4 +43,54 @@
   display: block;
   line-height: 60rpx;
   font-size: 10pt;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.news-item-left {
+  margin-right: 10px;
+}
+
+.news-image {
+  width: 300rpx;
+  height: 240rpx;
+}
+
+.news-item-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-title {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.news-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.news-author,
+.news-time {
+  font-size: 12px;
+  color: #999;
+  margin-right: 10px;
+}
+
+.news-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
