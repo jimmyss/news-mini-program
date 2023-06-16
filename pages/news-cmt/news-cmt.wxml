@@ -9,6 +9,6 @@
     <tui-icon name="link" size="22" class="tui-mr"></tui-icon>
   </view>
   <view class="tui-cmt-btn">
-    <tui-button bindtap="btnPublish">发表</tui-button>
+    <button style="background-color: #4285f4; color: white;" bindtap="btnPublish">发表</button>
   </view>
 </view>
