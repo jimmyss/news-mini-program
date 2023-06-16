@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: {},
+    hasUserInfo: false,
     pageNum:1,
     pageSize:10,
     newsList:[],
@@ -12,20 +14,39 @@ Page({
     clickId:0,
     num:0,
   },
-
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
     this.loadNews();
+    this.getUserInfo();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  getUserInfo: function (e) {
+    const self = this;
+    wx.getSetting({
+      success: (res) => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: (res) => {
+              console.log(res.userInfo);
+              self.setData({
+                userInfo: res.userInfo,
+                hasUserInfo: true
+              });
+            }
+          });
+        }
+      }
+    });
+    // 在用户点击按钮并授权后，获取用户信息
+    console.log(e)
+    if (e.detail.userInfo) {
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      });
+    }
   },
 
   /**

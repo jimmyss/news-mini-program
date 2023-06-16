@@ -11,7 +11,6 @@
   </scroll-view>
   <image class="expand-icon" src="/pages/homepage/images/angle-down-solid.svg" mode="aspectFit" bindtap='expandAllColumns' />
 </view>
-<view class="nav-blank"></view>
 <!-- 包含所有栏目的标签的网格视图 -->
 <view class="drawer-screen" bindtap="expandAllColumns" data-status="close" wx:if="{{showColumnFlag}}"></view>
 <view class="all-columns-grid" wx:if="{{showColumnFlag}}">
@@ -21,38 +20,45 @@
     </view>
   </block>
 </view>
-<!-- 新闻轮播图 -->
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}" wx:for-item="imgItem" wx:key="id">
-    <swiper-item>
-      <image class="slide-image" src="{{imgItem.src}}" mode="aspectFill"></image>
-    </swiper-item>
-  </block>
-</swiper>
-
-<view class="swiper-blank"></view>
-<!-- 新闻列表 -->
-<view class="news-list">
-  <!-- 使用 wx:for 循环遍历新闻列表 -->
-  <block wx:for="{{newsList}}" wx:key="index">
-    <!-- 每个新闻项 -->
-    <view class="news-item" bind:tap="navigateToIndex" data-index="{{index}}">
-      <view class="news-item-left">
-        <!-- 新闻图片 -->
-        <image class="news-image" src="{{item.picPath}}"></image>
-      </view>
-      <view class="news-item-right">
-        <!-- 新闻标题 -->
-        <view class="news-title">{{item.title}}</view>
-        <view class="news-details">
-          <!-- 新闻作者 -->
-          <view class="news-author">{{item.author}}</view>
-          <!-- 新闻发布时间 -->
-          <view class="news-time">{{item.time}}</view>
+<!-- 页面主体上部内容 -->
+<view class="nav-blank"></view>
+<!-- onload 加载效果 -->
+<view wx:if="{{loading}}" class="loading">
+  <image style="height: 125px; width: 160px;" src="/image/loading.gif"></image>
+</view>
+<view wx:else="{{!loading}}" class="news-container">
+  <!-- 新闻轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:for-item="imgItem" wx:key="id">
+      <swiper-item>
+        <image class="slide-image" src="{{imgItem.src}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="swiper-blank"></view>
+  <!-- 新闻列表 -->
+  <view class="news-list">
+    <!-- 使用 wx:for 循环遍历新闻列表 -->
+    <block wx:for="{{newsList}}" wx:key="index">
+      <!-- 每个新闻项 -->
+      <view class="news-item" bind:tap="navigateToIndex" data-index="{{index}}">
+        <view class="news-item-left">
+          <!-- 新闻图片 -->
+          <image class="news-image" src="{{item.picPath}}"></image>
+        </view>
+        <view class="news-item-right">
+          <!-- 新闻标题 -->
+          <view class="news-title">{{item.title}}</view>
+          <view class="news-details">
+            <!-- 新闻作者 -->
+            <view class="news-author">{{item.author}}</view>
+            <!-- 新闻发布时间 -->
+            <view class="news-time">{{item.time}}</view>
+          </view>
         </view>
       </view>
-    </view>
-    <!-- 添加分割线 -->
-    <view class="news-divider"></view>
-  </block>
+      <!-- 添加分割线 -->
+      <view class="news-divider"></view>
+    </block>
+  </view>
 </view>
