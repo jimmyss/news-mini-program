@@ -5,20 +5,24 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #4285f4; /* 这是一种蓝色的hex值，你可以根据需要修改 */
+  background-color: #4285f4;
+  /* 这是一种蓝色的hex值，你可以根据需要修改 */
   padding: 20px 0;
 }
 
 .avatar {
   width: 80px;
   height: 80px;
-  border-radius: 50%; /* 这将使图片变为圆形 */
+  border-radius: 50%;
+  /* 这将使图片变为圆形 */
 }
 
 .username {
   margin-top: 10px;
-  color: white; /* 设置用户名的颜色为白色 */
-  font-size: 20px; /* 设置字体大小 */
+  color: white;
+  /* 设置用户名的颜色为白色 */
+  font-size: 20px;
+  /* 设置字体大小 */
 }
 
 #news-list {
@@ -26,23 +30,19 @@
   padding: 15rpx;
 }
 
-.list-item{
+.favor-prompt {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
-  border-bottom: 1rpx solid gray;
 }
 
-.list-item-image{
-  width: 250rpx;
-  height: 150rpx;
-  margin:10rpx;
-}
-
-.list-item-text{
-  width: 100%;
-  display: block;
-  line-height: 60rpx;
-  font-size: 10pt;
+.favor-prompt .indicator {
+  width: 10px;
+  height: 20px;
+  background-color: #4285f4;
+  margin-right: 10px;
 }
 
 .news-item {
