@@ -102,10 +102,16 @@ Page({
           url: '../newsDetail/newsDetail',
           success: function(res) {
             // 在跳转成功后执行的逻辑
-            const currentPage = getCurrentPages().pop();
-            if (currentPage && currentPage.onLoad) {
-              currentPage.onLoad(); // 手动执行 onLoad 方法
-            }
+            // const currentPage = getCurrentPages().pop();
+            // if (currentPage && currentPage.onLoad) {
+            //   currentPage.onLoad(); // 手动执行 onLoad 方法
+            // }
+            wx.showToast({
+              title: '成功',
+              icon: 'success',
+              duration: 2000
+            });
+
           },
           fail: function(err) {
             // 跳转失败的处理逻辑

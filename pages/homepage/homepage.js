@@ -5,6 +5,7 @@ Page({
    */
   
   data: {
+    loading: false,
     pageNum:1,
     pageSize:10,
     newsList:[],
@@ -50,10 +51,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad:function(options) {
-		this.loadNews();//调用loadNews函数加载新闻列表
-		this.setData({
-			tapId: this.data.navbarTitleName[0].nameID
-		})
+    this.setData({
+      loading: true
+    })
+    setTimeout(() => {
+      this.loadNews();//调用loadNews函数加载新闻列表
+      this.setData({
+        tapId: this.data.navbarTitleName[0].nameID,
+        loading: false
+      })
+    }, 1000);	
   },
 
   /**
@@ -256,6 +263,8 @@ Page({
     const news = this.data.newsList[index];
     const picPath = news.picPath;
     const type=1;
+    const id = ((pageNum-1)*10+bios+index)%80
+    console.log(id)
     // 调用后端接口发送新闻序号
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
@@ -264,9 +273,7 @@ Page({
         'content-type': 'application/json'
       },
       data: {
-        index: index,
-        pageNum:pageNum,
-        bios:bios
+        id: id,
       },
       success: (res) => {
         const send=res.data;
@@ -276,7 +283,8 @@ Page({
                '&index=' + encodeURIComponent(index) + 
                '&pageNum=' + encodeURIComponent(pageNum) + 
                '&bios=' + encodeURIComponent(bios) +
-               '&type=' +encodeURIComponent(type)
+               '&type=' +encodeURIComponent(type) +
+               '&id=' + encodeURIComponent(id) 
         });
       },
       fail: (err) => {

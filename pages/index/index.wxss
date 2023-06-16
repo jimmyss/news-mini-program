@@ -34,7 +34,7 @@
   width: 30%;
 }
 .picImage{
-  margin-top: 20px;
+  margin-top: 50px;
   width: 90%;
 }
 .content {
