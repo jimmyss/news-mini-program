@@ -1,5 +1,5 @@
 <view class="container">
-  <view>文章的内容。。。。。。</view>
+  
 
 
   <view class="tui-operate-box">
@@ -19,7 +19,7 @@
   </view>
 
 
-  <view class="tui-cmt-title">精彩评论（20）</view>
+  <view class="tui-cmt-title">精彩评论</view>
   <view class="tui-cmtbox">
     <view class="tui-cmt-cell" wx:for="{{cmtList}}" wx:key="{{index}}">
       <image src="{{item.avatar}}" class="tui-avatar"></image>
