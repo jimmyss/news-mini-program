@@ -217,6 +217,9 @@ Page({
       },
       fail: (err) => {
         console.error('点击新闻失败:', err);
+        wx.showToast({
+          title: '点击新闻失败',
+        })
       }
     });
   },
