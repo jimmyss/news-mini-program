@@ -10,14 +10,13 @@
 </view>
 
 <view class="bottom-bar">
-  <view class="bottom-icon" bindtap="toggleCollect">
-  <image class="image" src="{{ isCollected ? '/pages/index/images/收藏实心.png' : '/pages/index/images/收藏空心.png' }}" mode="widthFix"></image>
+  <button class="bottom-icon" bindtap="toggleCollect">
+  <image class="image" src="{{ isCollected ? '/pages/index/images/favorite-filled.png' : '/pages/index/images/favorite.png' }}" mode="widthFix"></image>
+</button>
+<button class="bottom-icon" open-type="share">
+  <image class="image" src="/pages/index/images/share.png" mode="widthFix"></image>
+</button>
+<button class="bottom-icon center-icon" bindtap="toggleComment">
+  <image class="image" src="/pages/index/images/comment.png" mode="widthFix"></image>
+</button>
 </view>
-<view class="bottom-icon" bindtap="toggleShare">
-  <image class="image" src="{{ isShared ? '/pages/index/images/分享实心.png' : '/pages/index/images/分享空心.png' }}" mode="widthFix"></image>
-</view>
-<view class="bottom-icon center-icon" bindtap="toggleComment">
-  <image class="image" src="/pages/index/images/评论.png" mode="widthFix"></image>
-</view>
-</view>
-<!-- <tabBar idx="0"></tabBar> -->

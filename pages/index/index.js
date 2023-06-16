@@ -25,11 +25,10 @@ Page({
       }
     });
   },
-  
+
   onLoad(options) {
     // 获取 URL 参数
     const params = options;
-    console.log(params.id)
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
       method: 'POST',
@@ -54,13 +53,13 @@ Page({
           content: res.data.content || ''
         });
         console.log(res.data.news.isCollected)
-        if(res.data.news.isCollected==0){
+        if (res.data.news.isCollected == 0) {
           this.setData({
-            isCollected:false
+            isCollected: false
           });
-        }else{
+        } else {
           this.setData({
-            isCollected:true
+            isCollected: true
           });
         }
       },
@@ -101,7 +100,7 @@ Page({
       }
     });
   },
-  toggleCollect: function() {
+  toggleCollect: function () {
     this.setData({
       isCollected: !this.data.isCollected
     });
@@ -115,23 +114,23 @@ Page({
         id: this.data.id,
       }
     })
-    wx.showModal({
-      title: '提示',
-      content: '收藏成功',
-      showCancel: false,
-      success: (res) => {
-        if (res.confirm) {
-          console.log('用户点击确定');
-        }
-      }
-    });
+    if (this.data.isCollected) {
+      wx.showToast({
+        title: '收藏成功',
+      })
+    }
+    else {
+      wx.showToast({
+        title: '取消成功',
+      })
+    }
   },
-  toggleShare: function() {
+  toggleShare: function () {
     this.setData({
       isShared: !this.data.isShared
     });
   },
-  toggleComment: function() {
+  toggleComment: function () {
     wx.navigateTo({
       url: '/pages/newsDetail/newsDetail',
     });

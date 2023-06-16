@@ -26,6 +26,7 @@
 <view wx:if="{{loading}}" class="loading">
   <image style="height: 125px; width: 160px;" src="/image/loading.gif"></image>
 </view>
+<!-- <view class="swiper-blank"></view> -->
 <view wx:else="{{!loading}}" class="news-container">
   <!-- 新闻轮播图 -->
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">

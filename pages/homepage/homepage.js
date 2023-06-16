@@ -17,7 +17,7 @@ Page({
       { name: '文化', nameID: '201703', newsType: 'wenhua' },
       { name: '科技', nameID: '201704', newsType: 'keji' },
       { name: '财经', nameID: '201705', newsType: 'caijing' },
-      { name: '汽车', nameID: '201706', newsType: 'qiche' },
+      { name: '生活', nameID: '201706', newsType: 'shenghuo' },
       { name: '北京', nameID: '201707', newsType: 'beijing' },
       { name: '娱乐', nameID: '201708', newsType: 'yule' },
 		],
@@ -237,7 +237,8 @@ Page({
         'content-type': 'application/json'
       },
       data: {
-        index: id
+        id: id,
+        type:type
       },
       success: (res) => {
         const send=res.data;
@@ -247,7 +248,8 @@ Page({
                '&index=' + encodeURIComponent(id) + 
                '&pageNum=' + encodeURIComponent(pageNum) + 
                '&bios=' + encodeURIComponent(bios) +
-               '&type=' +encodeURIComponent(type)
+               '&type=' +encodeURIComponent(type) +
+               '&id=' + encodeURIComponent(id)
         });
       },
       fail: (err) => {
@@ -264,7 +266,6 @@ Page({
     const picPath = news.picPath;
     const type=1;
     const id = ((pageNum-1)*10+bios+index)%80
-    console.log(id)
     // 调用后端接口发送新闻序号
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
@@ -274,6 +275,7 @@ Page({
       },
       data: {
         id: id,
+        type:type
       },
       success: (res) => {
         const send=res.data;
@@ -289,6 +291,9 @@ Page({
       },
       fail: (err) => {
         console.error('点击新闻失败:', err);
+        wx.showToast({
+          title: '点击新闻失败',
+        })
       }
     });
   },
