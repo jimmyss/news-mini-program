@@ -25,7 +25,8 @@
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}" wx:for-item="imgItem" wx:key="id">
     <swiper-item>
-      <image class="slide-image" src="{{imgItem.src}}" mode="aspectFill"></image>
+      <image class="slide-image" src="{{imgItem.src}}" mode="aspectFill" bindtap="swiperNavigateTo" data-index="{{imgItem.id}}"></image>
+      <div class="image-title">{{imgItem.title}}</div>
     </swiper-item>
   </block>
 </swiper>

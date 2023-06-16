@@ -11,13 +11,13 @@ Page({
     bios:0,
 		clickId:0,
 		navbarTitleName: [
-      { name: '头条', nameID: '201701', newsType: 'top' },
+      { name: '国际', nameID: '201701', newsType: 'guoji' },
       { name: '军事', nameID: '201702', newsType: 'junshi' },
-      { name: '体育', nameID: '201703', newsType: 'tiyu' },
+      { name: '文化', nameID: '201703', newsType: 'wenhua' },
       { name: '科技', nameID: '201704', newsType: 'keji' },
       { name: '财经', nameID: '201705', newsType: 'caijing' },
-      { name: '社会', nameID: '201706', newsType: 'shehui' },
-      { name: '时尚', nameID: '201707', newsType: 'shishang' },
+      { name: '汽车', nameID: '201706', newsType: 'qiche' },
+      { name: '北京', nameID: '201707', newsType: 'beijing' },
       { name: '娱乐', nameID: '201708', newsType: 'yule' },
 		],
 		tapId:'',
@@ -27,9 +27,21 @@ Page({
     interval: 5000,
 		duration: 1000,
 		imgUrls:[
-			{id:1, src:'/pages/homepage/images/new19.png'},
-			{id:2, src:'/pages/homepage/images/new20.png'},
-			{id:3, src:'/pages/homepage/images/new21.png'}
+      {
+        id:0,
+        src:'/pages/homepage/images/new19.png',
+        title:'演员成“演贝”，演戏不用原声用配音，真的就不对吗？',
+      },
+			{
+        id:1,
+        src:'/pages/homepage/images/new20.png',
+        title:'欧委会称将不再采购华为中兴设备，外交部：有罪推定，坚决反对',
+      },
+			{
+        id:2, 
+        src:'/pages/homepage/images/new21.png',
+        title:'余永定：中国海外净资产2万多亿美元',
+      }
 		],
 
   },
@@ -87,10 +99,34 @@ Page({
 			showColumnFlag: false
 		}, () => {
 			// 在setData的回调函数中执行滚动逻辑
-			this.scrollToCenter(index);
-		});
+      //this.scrollToCenter(index);
+      //获取tapId，并调用后端接口刷新新闻列表
+      this.getNewsByTagId(this.data.tapId);
+    });
 	},
-	
+  
+  getNewsByTagId: function(tapId){
+    wx.showLoading({
+      title: '加载中...',
+    });
+    wx.request({
+      url: 'http://127.0.0.1:3000/api/news/tags',
+      method: 'GET',
+      data: {
+        tagId: tapId
+      },
+      success: res=>{
+        const newsList=res.data.news;
+        setTimeout(() => {
+          this.setData({
+            newsList: newsList
+          });
+          wx.hideLoading();
+        }, 1000);
+      }
+    });
+  },
+
 	scrollToCenter: function (index) {
 		// 创建选择器查询对象
 		const query = wx.createSelectorQuery();
@@ -102,7 +138,6 @@ Page({
 			// 计算滚动距离
 			const screenWidth = wx.getSystemInfoSync().windowWidth;
 			const scrollLeft = Math.max(targetRect.left - (screenWidth - targetRect.width) / 2, 0);
-	
 			// 滚动到指定位置
 			wx.pageScrollTo({
 				scrollLeft: scrollLeft,
@@ -182,13 +217,45 @@ Page({
     });
   },
 
-  navigateToIndex: function(event) {
+  swiperNavigateTo: function(event){
+    const id=event.currentTarget.dataset.index;
+    const pageNum=this.data.pageNum;
+    const bios=this.data.bios;
+    const picPath=this.data.imgUrls[id].src;
+    const type=0;
+    wx.request({
+      url: 'http://127.0.0.1:3000/api/detail',
+      method:'POST',
+      header:{
+        'content-type': 'application/json'
+      },
+      data: {
+        index: id
+      },
+      success: (res) => {
+        const send=res.data;
+        wx.navigateTo({
+          url: '/pages/index/index?title=' +
+               '&image=' + encodeURIComponent(picPath) +
+               '&index=' + encodeURIComponent(id) + 
+               '&pageNum=' + encodeURIComponent(pageNum) + 
+               '&bios=' + encodeURIComponent(bios) +
+               '&type=' +encodeURIComponent(type)
+        });
+      },
+      fail: (err) => {
+        console.error('点击新闻失败:', err);
+      }
+    })
+  },
 
+  navigateToIndex: function(event) {
     const index = event.currentTarget.dataset.index; // 获取点击的新闻序号
     const pageNum=this.data.pageNum;
     const bios=this.data.bios;
     const news = this.data.newsList[index];
     const picPath = news.picPath;
+    const type=1;
     // 调用后端接口发送新闻序号
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
@@ -208,7 +275,8 @@ Page({
                '&image=' + encodeURIComponent(picPath) +
                '&index=' + encodeURIComponent(index) + 
                '&pageNum=' + encodeURIComponent(pageNum) + 
-               '&bios=' + encodeURIComponent(bios)
+               '&bios=' + encodeURIComponent(bios) +
+               '&type=' +encodeURIComponent(type)
         });
       },
       fail: (err) => {

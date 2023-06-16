@@ -24,7 +24,8 @@ Page({
       data: {
         index: params.index,
         pageNum: params.pageNum,
-        bios: params.bios
+        bios: params.bios,
+        type:params.type
       },
       success: (res) => {
         this.setData({

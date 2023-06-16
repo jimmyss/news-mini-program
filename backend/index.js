@@ -1,514 +1,620 @@
 let data={
     newsList:[
           { 
-            title:'红星深度｜23只小熊猫之死：警方解救后寄养动物园 涉案野生动物救助待规范',
-            time:'2023-05-15',
+            title:'泽连斯基回应特朗普说“24小时解决俄乌冲突”：他为什么不早这么做？',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new1.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230515A09KKO00'
+            author:'环球网',
+            url:'https://new.qq.com/rain/a/20230616A04M9H00',
+            type:201702
           },
           {
-            title:'曾荣立一等战功的战区上将司令员发声，透露最新信号！',
-            time:'2023-05-15',
-            picPath:'/pages/homepage/images/new2.png',
-            author:'政知见',
-            url:'https://new.qq.com/rain/a/20230531A05OAE00'
+            title:'北约进入战备状态，31国计划群殴俄罗斯，中国不能掉以轻心',
+            time:'2023-06-15',
+            picPath:'/pages/homepage/images/new2-1.png',
+            author:'蓝星特快',
+            url:'https://new.qq.com/rain/a/20230615A0269G00',
+            type:201701
           },
           {
-            title:'山西10岁男孩失联身亡，嫌疑人系生母与继父 知情人：生母曾称是孩子偷钱挨打后跑了',
-            time:'2023-05-24',
+            title:'奔腾全新T90预售10万起 比哈弗H6还大、不输博越L 将6月18上市',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new3.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230524A041A700'
+            author:'腾讯汽车',
+            url:'https://new.qq.com/rain/a/20230616A01TQQ00',
+            type:201706
           },
           {
-            title:'红星观察｜珠峰攀登生意经：有尊享版套餐，还有“被人抬着上山”一条龙服务',
-            time:'2023-05-23',
+            title:'被封神的江西家族',
+            time:'2023-06-13',
             picPath:'/pages/homepage/images/new4.png',
-            author:'红星深度',
-            url:'https://new.qq.com/rain/a/20230523A0AGCH00'
+            author:'最爱历史',
+            url:'https://new.qq.com/rain/a/20230613A0459600',
+            type:201703
           },{
-            title:'武汉一小学生校园内被老师驾车碾死 校方：没酒驾，孩子跑到车前蹲着',
-            time:'2023-05-24',
+            title:'闯入球场拥抱梅西的球迷面临什么处罚？律师：警告或罚款可能性较大',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new5.png',
-            author:'都市快报橙柿互动',
-            url:'https://new.qq.com/rain/a/20230524A02J7R00'
+            author:'极目新闻',
+            url:'https://new.qq.com/rain/a/20230616A004MD00',
+            type:201707
           },{
-            title:'今年会有多少新生儿？产科一线：过去一天分娩七八个，现在几天一个',
-            time:'2023-05-24',
+            title:'等了两年，国产手机终于要大变样了',
+            time:'2023-06-14',
             picPath:'/pages/homepage/images/new6.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A01ASF00'
+            author:'锋潮评测',
+            url:'https://new.qq.com/rain/a/20230614A0ATBP00',
+            type:201704
           },{
-            title:'TikTok遭美国一州全面封杀！总裁周受资：违宪，已起诉',
-            time:'2023-05-24',
+            title:'空头正在反省！今晚华尔街将迎来4.2万亿美元的新风暴',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new7.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A0422H00'
+            author:'金十新媒体',
+            url:'https://new.qq.com/rain/a/20230616A03KQS00',
+            type:201705
           },{
-            title:'四川一教师输液时不幸身亡，涉事诊所称尽全力抢救，卫健局介入调查',
-            time:'2023-05-24',
+            title:'面对红毯直怼镜头，他毫不畏惧，黄晓明：我油过，但从没有丑过',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new8.png',
-            author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230523A05LTO00'
+            author:'风和日丽',
+            url:'https://new.qq.com/rain/a/20230616A04T5P00',
+            type:201708
           },{
             title:'美国会众议长麦卡锡：我们向中国借钱，不是为了养美国这些闲人',
             time:'2023-05-21',
             picPath:'/pages/homepage/images/new9.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230526V08Z2A00'
+            url:'https://new.qq.com/rain/a/20230526V08Z2A00',
+            type:201701
           },{ 
             title:'塞尔维亚总统宣布27日辞去执政党主席职务，现场数十万人雨中集结',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new10.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230527A0297A00'
+            url:'https://new.qq.com/rain/a/20230527A0297A00',
+            type:201703
           },///////////
           {
             title:'美国研究首次系统性定义“长新冠”，12种“后遗症”症状列入',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new11.png',
             author:'第一财经',
-            url:'https://new.qq.com/rain/a/20230526A04P8I00'
+            url:'https://new.qq.com/rain/a/20230526A04P8I00',
+            type:201701
           },
           {
             title:'人均GDP吊打北上深，这些四线小城普遍“家里有矿、富得流油”',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new12.png',
             author:'国民经略',
-            url:'https://new.qq.com/rain/a/20230527A02SW100'
+            url:'https://new.qq.com/rain/a/20230527A02SW100',
+            type:201705
           },
           {
             title:'9岁男孩失踪13年后尸骨现身山林地缝，两名村妇被警方带走',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new13.png',
             author:'极目新闻',
-            url:'https://new.qq.com/rain/a/20230527V01VNY00'
+            url:'https://new.qq.com/rain/a/20230527V01VNY00',
+            type:201708
           },{
             title:'男子称25元挂专家号，医生打20分钟电话聊拆迁：最后两句话打发我',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new14.png',
             author:'极目新闻',
-            url:'https://new.qq.com/rain/a/20230526A09RGP00'
+            url:'https://new.qq.com/rain/a/20230526A09RGP00',
+            type:201703
           },{
             title:'河北一派出所内烟花爆炸致4死2失联，4个月前当地曾发文禁止经营烟花',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new15.png',
             author:'上游新闻',
-            url:'https://new.qq.com/rain/a/20230527V01RKQ00'
+            url:'https://new.qq.com/rain/a/20230527V01RKQ00',
+            type:201707
           },{
             title:'25岁研究生受伤后舍不得买贵支架，致血栓转移到肺部，逝世后捐献器官',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new16.png',
             author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230527A01M7X00'
+            url:'https://new.qq.com/rain/a/20230527A01M7X00',
+            type:201701
           },{
             title:'艰难开往乌克兰的F-16战机',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new17.png',
             author:'中国新闻周刊',
-            url:'https://new.qq.com/rain/a/20230526A07XR400'
+            url:'https://new.qq.com/rain/a/20230526A07XR400',
+            type:201702
           },{
             title:'安徽女子死后被摘取器官案：被害人儿子涉嫌敲诈涉案医生被立案',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new18.png',
             author:'澎湃新闻',
-            url:'https://new.qq.com/rain/a/20230528V03VA900'
+            url:'https://new.qq.com/rain/a/20230528V03VA900',
+            type:201706
           },
           { 
-            title:'红星深度｜23只小熊猫之死：警方解救后寄养动物园 涉案野生动物救助待规范',
-            time:'2023-05-15',
+            title:'泽连斯基回应特朗普说“24小时解决俄乌冲突”：他为什么不早这么做？',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new1.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230515A09KKO00'
+            author:'环球网',
+            url:'https://new.qq.com/rain/a/20230616A04M9H00',
+            type:201702
           },
           {
-            title:'曾荣立一等战功的战区上将司令员发声，透露最新信号！',
-            time:'2023-05-15',
-            picPath:'/pages/homepage/images/new2.png',
-            author:'政知见',
-            url:'https://new.qq.com/rain/a/20230531A05OAE00'
+            title:'北约进入战备状态，31国计划群殴俄罗斯，中国不能掉以轻心',
+            time:'2023-06-15',
+            picPath:'/pages/homepage/images/new2-1.png',
+            author:'蓝星特快',
+            url:'https://new.qq.com/rain/a/20230615A0269G00',
+            type:201701
           },
           {
-            title:'山西10岁男孩失联身亡，嫌疑人系生母与继父 知情人：生母曾称是孩子偷钱挨打后跑了',
-            time:'2023-05-24',
+            title:'奔腾全新T90预售10万起 比哈弗H6还大、不输博越L 将6月18上市',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new3.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230524A041A700'
+            author:'腾讯汽车',
+            url:'https://new.qq.com/rain/a/20230616A01TQQ00',
+            type:201706
           },
           {
-            title:'红星观察｜珠峰攀登生意经：有尊享版套餐，还有“被人抬着上山”一条龙服务',
-            time:'2023-05-23',
+            title:'被封神的江西家族',
+            time:'2023-06-13',
             picPath:'/pages/homepage/images/new4.png',
-            author:'红星深度',
-            url:'https://new.qq.com/rain/a/20230523A0AGCH00'
+            author:'最爱历史',
+            url:'https://new.qq.com/rain/a/20230613A0459600',
+            type:201703
           },{
-            title:'武汉一小学生校园内被老师驾车碾死 校方：没酒驾，孩子跑到车前蹲着',
-            time:'2023-05-24',
+            title:'闯入球场拥抱梅西的球迷面临什么处罚？律师：警告或罚款可能性较大',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new5.png',
-            author:'都市快报橙柿互动',
-            url:'https://new.qq.com/rain/a/20230524A02J7R00'
+            author:'极目新闻',
+            url:'https://new.qq.com/rain/a/20230616A004MD00',
+            type:201707
           },{
-            title:'今年会有多少新生儿？产科一线：过去一天分娩七八个，现在几天一个',
-            time:'2023-05-24',
+            title:'等了两年，国产手机终于要大变样了',
+            time:'2023-06-14',
             picPath:'/pages/homepage/images/new6.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A01ASF00'
+            author:'锋潮评测',
+            url:'https://new.qq.com/rain/a/20230614A0ATBP00',
+            type:201704
           },{
-            title:'TikTok遭美国一州全面封杀！总裁周受资：违宪，已起诉',
-            time:'2023-05-24',
+            title:'空头正在反省！今晚华尔街将迎来4.2万亿美元的新风暴',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new7.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A0422H00'
+            author:'金十新媒体',
+            url:'https://new.qq.com/rain/a/20230616A03KQS00',
+            type:201705
           },{
-            title:'四川一教师输液时不幸身亡，涉事诊所称尽全力抢救，卫健局介入调查',
-            time:'2023-05-24',
+            title:'面对红毯直怼镜头，他毫不畏惧，黄晓明：我油过，但从没有丑过',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new8.png',
-            author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230523A05LTO00'
+            author:'风和日丽',
+            url:'https://new.qq.com/rain/a/20230616A04T5P00',
+            type:201708
           },{
             title:'美国会众议长麦卡锡：我们向中国借钱，不是为了养美国这些闲人',
             time:'2023-05-21',
             picPath:'/pages/homepage/images/new9.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230526V08Z2A00'
+            url:'https://new.qq.com/rain/a/20230526V08Z2A00',
+            type:201701
           },{ 
             title:'塞尔维亚总统宣布27日辞去执政党主席职务，现场数十万人雨中集结',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new10.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230527A0297A00'
+            url:'https://new.qq.com/rain/a/20230527A0297A00',
+            type:201703
           },///////////
           {
             title:'美国研究首次系统性定义“长新冠”，12种“后遗症”症状列入',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new11.png',
             author:'第一财经',
-            url:'https://new.qq.com/rain/a/20230526A04P8I00'
+            url:'https://new.qq.com/rain/a/20230526A04P8I00',
+            type:201701
           },
           {
             title:'人均GDP吊打北上深，这些四线小城普遍“家里有矿、富得流油”',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new12.png',
             author:'国民经略',
-            url:'https://new.qq.com/rain/a/20230527A02SW100'
+            url:'https://new.qq.com/rain/a/20230527A02SW100',
+            type:201705
           },
           {
             title:'9岁男孩失踪13年后尸骨现身山林地缝，两名村妇被警方带走',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new13.png',
             author:'极目新闻',
-            url:'https://new.qq.com/rain/a/20230527V01VNY00'
+            url:'https://new.qq.com/rain/a/20230527V01VNY00',
+            type:201708
           },{
             title:'男子称25元挂专家号，医生打20分钟电话聊拆迁：最后两句话打发我',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new14.png',
             author:'极目新闻',
-            url:'https://new.qq.com/rain/a/20230526A09RGP00'
+            url:'https://new.qq.com/rain/a/20230526A09RGP00',
+            type:201703
           },{
             title:'河北一派出所内烟花爆炸致4死2失联，4个月前当地曾发文禁止经营烟花',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new15.png',
             author:'上游新闻',
-            url:'https://new.qq.com/rain/a/20230527V01RKQ00'
+            url:'https://new.qq.com/rain/a/20230527V01RKQ00',
+            type:201707
           },{
             title:'25岁研究生受伤后舍不得买贵支架，致血栓转移到肺部，逝世后捐献器官',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new16.png',
             author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230527A01M7X00'
+            url:'https://new.qq.com/rain/a/20230527A01M7X00',
+            type:201701
           },{
             title:'艰难开往乌克兰的F-16战机',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new17.png',
             author:'中国新闻周刊',
-            url:'https://new.qq.com/rain/a/20230526A07XR400'
+            url:'https://new.qq.com/rain/a/20230526A07XR400',
+            type:201702
           },{
             title:'安徽女子死后被摘取器官案：被害人儿子涉嫌敲诈涉案医生被立案',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new18.png',
             author:'澎湃新闻',
-            url:'https://new.qq.com/rain/a/20230528V03VA900'
+            url:'https://new.qq.com/rain/a/20230528V03VA900',
+            type:201706
           },
           { 
-            title:'红星深度｜23只小熊猫之死：警方解救后寄养动物园 涉案野生动物救助待规范',
-            time:'2023-05-15',
+            title:'泽连斯基回应特朗普说“24小时解决俄乌冲突”：他为什么不早这么做？',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new1.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230515A09KKO00'
+            author:'环球网',
+            url:'https://new.qq.com/rain/a/20230616A04M9H00',
+            type:201702
           },
           {
-            title:'曾荣立一等战功的战区上将司令员发声，透露最新信号！',
-            time:'2023-05-15',
-            picPath:'/pages/homepage/images/new2.png',
-            author:'政知见',
-            url:'https://new.qq.com/rain/a/20230531A05OAE00'
+            title:'北约进入战备状态，31国计划群殴俄罗斯，中国不能掉以轻心',
+            time:'2023-06-15',
+            picPath:'/pages/homepage/images/new2-1.png',
+            author:'蓝星特快',
+            url:'https://new.qq.com/rain/a/20230615A0269G00',
+            type:201701
           },
           {
-            title:'山西10岁男孩失联身亡，嫌疑人系生母与继父 知情人：生母曾称是孩子偷钱挨打后跑了',
-            time:'2023-05-24',
+            title:'奔腾全新T90预售10万起 比哈弗H6还大、不输博越L 将6月18上市',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new3.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230524A041A700'
+            author:'腾讯汽车',
+            url:'https://new.qq.com/rain/a/20230616A01TQQ00',
+            type:201706
           },
           {
-            title:'红星观察｜珠峰攀登生意经：有尊享版套餐，还有“被人抬着上山”一条龙服务',
-            time:'2023-05-23',
+            title:'被封神的江西家族',
+            time:'2023-06-13',
             picPath:'/pages/homepage/images/new4.png',
-            author:'红星深度',
-            url:'https://new.qq.com/rain/a/20230523A0AGCH00'
+            author:'最爱历史',
+            url:'https://new.qq.com/rain/a/20230613A0459600',
+            type:201703
           },{
-            title:'武汉一小学生校园内被老师驾车碾死 校方：没酒驾，孩子跑到车前蹲着',
-            time:'2023-05-24',
+            title:'闯入球场拥抱梅西的球迷面临什么处罚？律师：警告或罚款可能性较大',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new5.png',
-            author:'都市快报橙柿互动',
-            url:'https://new.qq.com/rain/a/20230524A02J7R00'
+            author:'极目新闻',
+            url:'https://new.qq.com/rain/a/20230616A004MD00',
+            type:201707
           },{
-            title:'今年会有多少新生儿？产科一线：过去一天分娩七八个，现在几天一个',
-            time:'2023-05-24',
+            title:'等了两年，国产手机终于要大变样了',
+            time:'2023-06-14',
             picPath:'/pages/homepage/images/new6.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A01ASF00'
+            author:'锋潮评测',
+            url:'https://new.qq.com/rain/a/20230614A0ATBP00',
+            type:201704
           },{
-            title:'TikTok遭美国一州全面封杀！总裁周受资：违宪，已起诉',
-            time:'2023-05-24',
+            title:'空头正在反省！今晚华尔街将迎来4.2万亿美元的新风暴',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new7.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A0422H00'
+            author:'金十新媒体',
+            url:'https://new.qq.com/rain/a/20230616A03KQS00',
+            type:201705
           },{
-            title:'四川一教师输液时不幸身亡，涉事诊所称尽全力抢救，卫健局介入调查',
-            time:'2023-05-24',
+            title:'面对红毯直怼镜头，他毫不畏惧，黄晓明：我油过，但从没有丑过',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new8.png',
-            author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230523A05LTO00'
+            author:'风和日丽',
+            url:'https://new.qq.com/rain/a/20230616A04T5P00',
+            type:201708
           },{
             title:'美国会众议长麦卡锡：我们向中国借钱，不是为了养美国这些闲人',
             time:'2023-05-21',
             picPath:'/pages/homepage/images/new9.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230526V08Z2A00'
+            url:'https://new.qq.com/rain/a/20230526V08Z2A00',
+            type:201701
           },{ 
             title:'塞尔维亚总统宣布27日辞去执政党主席职务，现场数十万人雨中集结',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new10.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230527A0297A00'
+            url:'https://new.qq.com/rain/a/20230527A0297A00',
+            type:201703
           },///////////
           {
             title:'美国研究首次系统性定义“长新冠”，12种“后遗症”症状列入',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new11.png',
             author:'第一财经',
-            url:'https://new.qq.com/rain/a/20230526A04P8I00'
+            url:'https://new.qq.com/rain/a/20230526A04P8I00',
+            type:201701
           },
           {
             title:'人均GDP吊打北上深，这些四线小城普遍“家里有矿、富得流油”',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new12.png',
             author:'国民经略',
-            url:'https://new.qq.com/rain/a/20230527A02SW100'
+            url:'https://new.qq.com/rain/a/20230527A02SW100',
+            type:201705
           },
           {
             title:'9岁男孩失踪13年后尸骨现身山林地缝，两名村妇被警方带走',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new13.png',
             author:'极目新闻',
-            url:'https://new.qq.com/rain/a/20230527V01VNY00'
+            url:'https://new.qq.com/rain/a/20230527V01VNY00',
+            type:201708
           },{
             title:'男子称25元挂专家号，医生打20分钟电话聊拆迁：最后两句话打发我',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new14.png',
             author:'极目新闻',
-            url:'https://new.qq.com/rain/a/20230526A09RGP00'
+            url:'https://new.qq.com/rain/a/20230526A09RGP00',
+            type:201703
           },{
             title:'河北一派出所内烟花爆炸致4死2失联，4个月前当地曾发文禁止经营烟花',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new15.png',
             author:'上游新闻',
-            url:'https://new.qq.com/rain/a/20230527V01RKQ00'
+            url:'https://new.qq.com/rain/a/20230527V01RKQ00',
+            type:201707
           },{
             title:'25岁研究生受伤后舍不得买贵支架，致血栓转移到肺部，逝世后捐献器官',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new16.png',
             author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230527A01M7X00'
+            url:'https://new.qq.com/rain/a/20230527A01M7X00',
+            type:201701
           },{
             title:'艰难开往乌克兰的F-16战机',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new17.png',
             author:'中国新闻周刊',
-            url:'https://new.qq.com/rain/a/20230526A07XR400'
+            url:'https://new.qq.com/rain/a/20230526A07XR400',
+            type:201702
           },{
             title:'安徽女子死后被摘取器官案：被害人儿子涉嫌敲诈涉案医生被立案',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new18.png',
             author:'澎湃新闻',
-            url:'https://new.qq.com/rain/a/20230528V03VA900'
+            url:'https://new.qq.com/rain/a/20230528V03VA900',
+            type:201706
           },
           { 
-            title:'红星深度｜23只小熊猫之死：警方解救后寄养动物园 涉案野生动物救助待规范',
-            time:'2023-05-15',
+            title:'泽连斯基回应特朗普说“24小时解决俄乌冲突”：他为什么不早这么做？',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new1.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230515A09KKO00'
+            author:'环球网',
+            url:'https://new.qq.com/rain/a/20230616A04M9H00',
+            type:201702
           },
           {
-            title:'曾荣立一等战功的战区上将司令员发声，透露最新信号！',
-            time:'2023-05-15',
-            picPath:'/pages/homepage/images/new2.png',
-            author:'政知见',
-            url:'https://new.qq.com/rain/a/20230531A05OAE00'
+            title:'北约进入战备状态，31国计划群殴俄罗斯，中国不能掉以轻心',
+            time:'2023-06-15',
+            picPath:'/pages/homepage/images/new2-1.png',
+            author:'蓝星特快',
+            url:'https://new.qq.com/rain/a/20230615A0269G00',
+            type:201701
           },
           {
-            title:'山西10岁男孩失联身亡，嫌疑人系生母与继父 知情人：生母曾称是孩子偷钱挨打后跑了',
-            time:'2023-05-24',
+            title:'奔腾全新T90预售10万起 比哈弗H6还大、不输博越L 将6月18上市',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new3.png',
-            author:'成都商报红星新闻',
-            url:'https://new.qq.com/rain/a/20230524A041A700'
+            author:'腾讯汽车',
+            url:'https://new.qq.com/rain/a/20230616A01TQQ00',
+            type:201706
           },
           {
-            title:'红星观察｜珠峰攀登生意经：有尊享版套餐，还有“被人抬着上山”一条龙服务',
-            time:'2023-05-23',
+            title:'被封神的江西家族',
+            time:'2023-06-13',
             picPath:'/pages/homepage/images/new4.png',
-            author:'红星深度',
-            url:'https://new.qq.com/rain/a/20230523A0AGCH00'
+            author:'最爱历史',
+            url:'https://new.qq.com/rain/a/20230613A0459600',
+            type:201703
           },{
-            title:'武汉一小学生校园内被老师驾车碾死 校方：没酒驾，孩子跑到车前蹲着',
-            time:'2023-05-24',
+            title:'闯入球场拥抱梅西的球迷面临什么处罚？律师：警告或罚款可能性较大',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new5.png',
-            author:'都市快报橙柿互动',
-            url:'https://new.qq.com/rain/a/20230524A02J7R00'
+            author:'极目新闻',
+            url:'https://new.qq.com/rain/a/20230616A004MD00',
+            type:201707
           },{
-            title:'今年会有多少新生儿？产科一线：过去一天分娩七八个，现在几天一个',
-            time:'2023-05-24',
+            title:'等了两年，国产手机终于要大变样了',
+            time:'2023-06-14',
             picPath:'/pages/homepage/images/new6.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A01ASF00'
+            author:'锋潮评测',
+            url:'https://new.qq.com/rain/a/20230614A0ATBP00',
+            type:201704
           },{
-            title:'TikTok遭美国一州全面封杀！总裁周受资：违宪，已起诉',
-            time:'2023-05-24',
+            title:'空头正在反省！今晚华尔街将迎来4.2万亿美元的新风暴',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new7.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A0422H00'
+            author:'金十新媒体',
+            url:'https://new.qq.com/rain/a/20230616A03KQS00',
+            type:201705
           },{
-            title:'四川一教师输液时不幸身亡，涉事诊所称尽全力抢救，卫健局介入调查',
-            time:'2023-05-24',
+            title:'面对红毯直怼镜头，他毫不畏惧，黄晓明：我油过，但从没有丑过',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new8.png',
-            author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230523A05LTO00'
+            author:'风和日丽',
+            url:'https://new.qq.com/rain/a/20230616A04T5P00',
+            type:201708
           },{
             title:'美国会众议长麦卡锡：我们向中国借钱，不是为了养美国这些闲人',
             time:'2023-05-21',
             picPath:'/pages/homepage/images/new9.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230526V08Z2A00'
+            url:'https://new.qq.com/rain/a/20230526V08Z2A00',
+            type:201701
           },{ 
             title:'塞尔维亚总统宣布27日辞去执政党主席职务，现场数十万人雨中集结',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new10.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230527A0297A00'
+            url:'https://new.qq.com/rain/a/20230527A0297A00',
+            type:201703
           },///////////
           {
             title:'美国研究首次系统性定义“长新冠”，12种“后遗症”症状列入',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new11.png',
             author:'第一财经',
-            url:'https://new.qq.com/rain/a/20230526A04P8I00'
+            url:'https://new.qq.com/rain/a/20230526A04P8I00',
+            type:201701
           },
           {
             title:'人均GDP吊打北上深，这些四线小城普遍“家里有矿、富得流油”',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new12.png',
             author:'国民经略',
-            url:'https://new.qq.com/rain/a/20230527A02SW100'
+            url:'https://new.qq.com/rain/a/20230527A02SW100',
+            type:201705
           },
           {
             title:'9岁男孩失踪13年后尸骨现身山林地缝，两名村妇被警方带走',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new13.png',
             author:'极目新闻',
-            url:'https://new.qq.com/rain/a/20230527V01VNY00'
+            url:'https://new.qq.com/rain/a/20230527V01VNY00',
+            type:201708
           },{
             title:'男子称25元挂专家号，医生打20分钟电话聊拆迁：最后两句话打发我',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new14.png',
             author:'极目新闻',
-            url:'https://new.qq.com/rain/a/20230526A09RGP00'
+            url:'https://new.qq.com/rain/a/20230526A09RGP00',
+            type:201703
           },{
             title:'河北一派出所内烟花爆炸致4死2失联，4个月前当地曾发文禁止经营烟花',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new15.png',
             author:'上游新闻',
-            url:'https://new.qq.com/rain/a/20230527V01RKQ00'
+            url:'https://new.qq.com/rain/a/20230527V01RKQ00',
+            type:201707
           },{
             title:'25岁研究生受伤后舍不得买贵支架，致血栓转移到肺部，逝世后捐献器官',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new16.png',
             author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230527A01M7X00'
+            url:'https://new.qq.com/rain/a/20230527A01M7X00',
+            type:201701
           },{
             title:'艰难开往乌克兰的F-16战机',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new17.png',
             author:'中国新闻周刊',
-            url:'https://new.qq.com/rain/a/20230526A07XR400'
+            url:'https://new.qq.com/rain/a/20230526A07XR400',
+            type:201702
           },{
             title:'安徽女子死后被摘取器官案：被害人儿子涉嫌敲诈涉案医生被立案',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new18.png',
             author:'澎湃新闻',
-            url:'https://new.qq.com/rain/a/20230528V03VA900'
+            url:'https://new.qq.com/rain/a/20230528V03VA900',
+            type:201706
           },{
-            title:'红星观察｜珠峰攀登生意经：有尊享版套餐，还有“被人抬着上山”一条龙服务',
-            time:'2023-05-23',
+            title:'被封神的江西家族',
+            time:'2023-06-13',
             picPath:'/pages/homepage/images/new4.png',
-            author:'红星深度',
-            url:'https://new.qq.com/rain/a/20230523A0AGCH00'
+            author:'最爱历史',
+            url:'https://new.qq.com/rain/a/20230613A0459600',
+            type:201703
           },{
-            title:'武汉一小学生校园内被老师驾车碾死 校方：没酒驾，孩子跑到车前蹲着',
-            time:'2023-05-24',
+            title:'闯入球场拥抱梅西的球迷面临什么处罚？律师：警告或罚款可能性较大',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new5.png',
-            author:'都市快报橙柿互动',
-            url:'https://new.qq.com/rain/a/20230524A02J7R00'
+            author:'极目新闻',
+            url:'https://new.qq.com/rain/a/20230616A004MD00',
+            type:201707
           },{
-            title:'今年会有多少新生儿？产科一线：过去一天分娩七八个，现在几天一个',
-            time:'2023-05-24',
+            title:'等了两年，国产手机终于要大变样了',
+            time:'2023-06-14',
             picPath:'/pages/homepage/images/new6.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A01ASF00'
+            author:'锋潮评测',
+            url:'https://new.qq.com/rain/a/20230614A0ATBP00',
+            type:201704
           },{
-            title:'TikTok遭美国一州全面封杀！总裁周受资：违宪，已起诉',
-            time:'2023-05-24',
+            title:'空头正在反省！今晚华尔街将迎来4.2万亿美元的新风暴',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new7.png',
-            author:'每日经济新闻',
-            url:'https://new.qq.com/rain/a/20230524A0422H00'
+            author:'金十新媒体',
+            url:'https://new.qq.com/rain/a/20230616A03KQS00',
+            type:201705
           },{
-            title:'四川一教师输液时不幸身亡，涉事诊所称尽全力抢救，卫健局介入调查',
-            time:'2023-05-24',
+            title:'面对红毯直怼镜头，他毫不畏惧，黄晓明：我油过，但从没有丑过',
+            time:'2023-06-16',
             picPath:'/pages/homepage/images/new8.png',
-            author:'九派新闻',
-            url:'https://new.qq.com/rain/a/20230523A05LTO00'
+            author:'风和日丽',
+            url:'https://new.qq.com/rain/a/20230616A04T5P00',
+            type:201708
           },{
             title:'美国会众议长麦卡锡：我们向中国借钱，不是为了养美国这些闲人',
             time:'2023-05-21',
             picPath:'/pages/homepage/images/new9.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230526V08Z2A00'
+            url:'https://new.qq.com/rain/a/20230526V08Z2A00',
+            type:201701
           },{ 
             title:'塞尔维亚总统宣布27日辞去执政党主席职务，现场数十万人雨中集结',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new10.png',
             author:'观察者网',
-            url:'https://new.qq.com/rain/a/20230527A0297A00'
+            url:'https://new.qq.com/rain/a/20230527A0297A00',
+            type:201703
           },///////////
           {
             title:'美国研究首次系统性定义“长新冠”，12种“后遗症”症状列入',
             time:'2023-05-27',
             picPath:'/pages/homepage/images/new11.png',
             author:'第一财经',
-            url:'https://new.qq.com/rain/a/20230526A04P8I00'
-          }
+            url:'https://new.qq.com/rain/a/20230526A04P8I00',
+            type:201701
+          },
+    ],
+    swiperList:[
+      {
+        title:'演员成“演贝”，演戏不用原声用配音，真的就不对吗？',
+        time:'2023-06-13',
+        picPath:'/pages/homepage/images/new19.png',
+        author:'云盖雪',
+        url:'https://new.qq.com/rain/a/20230613A06MOP00',
+        type:201703
+      },
+      {
+        title:'欧委会称将不再采购华为中兴设备，外交部：有罪推定，坚决反对',
+        time:'2023-06-16',
+        picPath:'/pages/homepage/images/new20.png',
+        author:'环球网',
+        url:'https://new.qq.com/rain/a/20230616A05LEZ00',
+        type:201701
+      },
+      {
+        title:'余永定：中国海外净资产2万多亿美元，应使投资收入由负转正',
+        time:'2023-06-13',
+        picPath:'/pages/homepage/images/new21.png',
+        author:'财经五月花',
+        url:'https://new.qq.com/rain/a/20230613A0668700',
+        type:201705
+      }
     ],
     pageNum:1,
     pageSize:10,
@@ -587,6 +693,16 @@ app.post('/api/comment', (req, res) => {
 });
 //end-comment
 
+//获取
+app.get('/api/news/tags', (req, res)=>{
+  const{tagId}=req.query;
+  const type=parseInt(tagId);
+  const finalData=data.newsList.filter((news)=>{
+    return news.type===type;
+  })
+  res.json({news:finalData});
+})
+
 async function fetchNewsContent(url) {
   try {
     const response = await axios.get(url);
@@ -638,7 +754,7 @@ app.get('/api/homepage/bottom', (req, res) => {
 
 // 设置路由， 处理加载界面功能
 app.get('/api/homepage/load', (req, res)=>{
-  console.log(data)
+  //console.log(data)
   const pageSize=10;
   const min=1;
   const max=data.newsList.length/pageSize;
@@ -694,18 +810,27 @@ app.get('/api/homepage/pull', (req, res)=>{
 
 //获取新闻内容
 app.post('/api/detail', async(req, res)=>{
-  const{index, pageNum, bios}=req.body;
+  const{index, pageNum, bios, type}=req.body;
   const pageNumber=parseInt(pageNum);
   const ind=parseInt(index);
   const b=parseInt(bios);
-  //得到具体新闻内容
-  const newsIndex_1=(pageNumber-1)*10+b+ind;
-  const newsIndex_2=newsIndex_1%80;
-  var newsInfo=data.newsList[newsIndex_2];
-  const newsContent=await fetchNewsContent(newsInfo.url);
-  console.log(newsContent)
-  //根据newsInfo中的新闻url链接获取对应链接的新闻正文内容
-  res.json({news:newsInfo, content:newsContent});
+  const t=parseInt(type);
+  if(t==1){
+    //得到具体新闻内容
+    const newsIndex_1=(pageNumber-1)*10+b+ind;
+    const newsIndex_2=newsIndex_1%80;
+    //console.log(newsIndex_1);
+    var newsInfo=data.newsList[newsIndex_2];
+    const newsContent=await fetchNewsContent(newsInfo.url);
+    //console.log(newsContent)
+    //根据newsInfo中的新闻url链接获取对应链接的新闻正文内容
+    res.json({news:newsInfo, content:newsContent});
+  }else{//如果t=0那么就根据轮播图情况跳转
+    var newsInfo=data.swiperList[ind];
+    const newsContent=await fetchNewsContent(newsInfo.url);
+    res.json({news:newsInfo, content:newsContent});
+  }
+  
 })
 
 //获取新闻内容
@@ -739,7 +864,6 @@ app.get('/api/favorite/load', (req, res)=>{
 
 //获取新闻内容
 app.post('/api/favorite/add', async(req, res)=>{
-    console.log('add');
     fs.readFile('favorites.json', 'utf-8', function (err, data) {
         if (err) {
             console.log(err);
@@ -772,6 +896,8 @@ app.post('/api/favorite/add', async(req, res)=>{
     //const u=JSON.parse(url);
     //data.favoritesList.append({'title':tit,'time':tim,'picPath':pic,'author':au,'url':u});
 })
+
+
 
 // 启动服务器
 const port = 3000; // 设置服务器监听的端口号

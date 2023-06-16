@@ -130,6 +130,18 @@ swiper, swiper-item {
   height: 100%;
 }
 
+.image-title {
+  position: absolute;
+  bottom:15rpx;
+  left: 10rpx;
+  right:10rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .news-item {
   display: flex;
   align-items: center;
