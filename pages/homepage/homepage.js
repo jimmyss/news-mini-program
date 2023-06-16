@@ -5,6 +5,7 @@ Page({
    */
   
   data: {
+    loading: false,
     pageNum:1,
     pageSize:10,
     newsList:[],
@@ -38,10 +39,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad:function(options) {
-		this.loadNews();//调用loadNews函数加载新闻列表
-		this.setData({
-			tapId: this.data.navbarTitleName[0].nameID
-		})
+    this.setData({
+      loading: true
+    })
+    setTimeout(() => {
+      this.loadNews();//调用loadNews函数加载新闻列表
+      this.setData({
+        tapId: this.data.navbarTitleName[0].nameID,
+        loading: false
+      })
+    }, 1000);	
   },
 
   /**
