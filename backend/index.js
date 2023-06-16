@@ -742,18 +742,24 @@ async function fetchNewsContent(url) {
 // 设置路由，处理触底加载功能
 app.get('/api/homepage/bottom', (req, res) => {
   const { pageNum } = req.query;
-  const {bios}=req.query;
+  const { bios }=req.query;
+  const { pageBottomTime } = req.query;
   const pageSize = 10;
-  
+
   // 将 pageNum 转换为数字类型
   const pageNumber = parseInt(pageNum);
   const bios_=parseInt(bios);
-  
+  var pageBottomTime_=parseInt(pageBottomTime);
+  pageBottomTime_ = pageBottomTime_ +1;
+  console.log('pageNum',pageNum);
+  console.log('bios',bios);
+  console.log('pageBottomTime',pageBottomTime);
   // 计算开始和结束索引
-  const startIndex = (pageNumber * pageSize+bios_)%80;
+  const startIndex = ((pageNumber+pageBottomTime_-1) * pageSize+bios_)%80;
   const endIndex = startIndex + pageSize;
-  
-  const new_pageNumber=Math.floor(startIndex/pageSize)+1;
+  console.log('startIndex',startIndex);
+  console.log('endIndex',endIndex);
+
   //调整结束地址
   if(endIndex>80){
     const endIndex1=80;
@@ -761,17 +767,17 @@ app.get('/api/homepage/bottom', (req, res) => {
     const endIndex2=endIndex%80;
     const newsData=data.newsList.slice(startIndex, endIndex1);
     const finalData=newsData.concat(data.newsList.slice(startIndex2, endIndex2));
-    res.json({news:finalData,pageNum:new_pageNumber, bios:bios});
+    res.json({news:finalData,pageBottomTime:pageBottomTime_});
   }
   else{
     const newsData=data.newsList.slice(startIndex, endIndex);
-    res.json({news:newsData,pageNum:new_pageNumber});
+    res.json({news:newsData,pageBottomTime:pageBottomTime_});
   }
 });
 
 // 设置路由， 处理加载界面功能
 app.get('/api/homepage/load', (req, res)=>{
-  console.log(data)
+  //console.log(data)
   const pageSize=10;
   const min=1;
   const max=data.newsList.length/pageSize;

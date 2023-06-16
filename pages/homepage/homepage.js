@@ -6,6 +6,7 @@ Page({
   
   data: {
     loading: false,
+    pageBottomTime:0,
     pageNum:1,
     pageSize:10,
     newsList:[],
@@ -148,7 +149,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-    const { pageNum, bios } = this.data;
+    const { pageNum, bios,pageBottomTime } = this.data;
     wx.showLoading({
       title: '加载中...',
     });
@@ -156,15 +157,16 @@ Page({
       url: 'http://127.0.0.1:3000/api/homepage/bottom',
       data: {
         pageNum: pageNum,
-        bios:bios
+        bios:bios,
+        pageBottomTime:pageBottomTime
       },
       success: res => {
         const newsData = res.data.news;
-        const pNum=res.data.pageNum;
+        const pageBottomTime=res.data.pageBottomTime;
         setTimeout(() => {
           this.setData({
             newsList: this.data.newsList.concat(newsData),
-            pageNum:pNum,
+            pageBottomTime:pageBottomTime
           });
           wx.hideLoading();
         }, 1000);
@@ -191,12 +193,13 @@ Page({
 
   navigateToIndex: function(event) {
     const index = event.currentTarget.dataset.index; // 获取点击的新闻序号
+    console.log('index',index)
     const pageNum=this.data.pageNum;
     const bios=this.data.bios;
     const news = this.data.newsList[index];
     const picPath = news.picPath;
     const id = ((pageNum-1)*10+bios+index)%80
-    console.log(id)
+    console.log('id',id)
     // 调用后端接口发送新闻序号
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
