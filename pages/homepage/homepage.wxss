@@ -178,6 +178,8 @@ swiper-item {
 .news-image {
   width: 300rpx;
   height: 240rpx;
+  border-radius: 5px;
+  margin-left: 4px;
 }
 
 .news-item-right {

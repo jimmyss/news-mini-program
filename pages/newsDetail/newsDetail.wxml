@@ -1,24 +1,4 @@
 <view class="container">
-  
-
-
-  <view class="tui-operate-box">
-    <!-- 赞 -->
-    <!-- <tui-tag type="{{isFabulous?'':'gray'}}" shape="circle" plain="{{true}}" tui-tag-class="tui-tag-class" bind:click="btnFabulous">
-      <tui-icon name="{{isFabulous?'agree-fill':'agree'}}" size="20" color="{{isFabulous?'#5677fc':'#333'}}"></tui-icon>
-      <text class="tui-black {{isFabulous?'tui-primary':''}}">{{fabulous}}赞</text>
-    </tui-tag> -->
-    <!-- 分享 -->
-    <!-- <button open-type="share" class="tui-share-btn">
-      <tui-tag type="gray" shape="circle" plain="{{true}}" tui-tag-class="tui-tag-class">
-        <tui-icon name="partake" size="20" color="#333"></tui-icon>
-        <text class="tui-black">分享</text>
-      </tui-tag>
-    </button> -->
-
-  </view>
-
-
   <view class="tui-cmt-title">精彩评论</view>
   <view class="tui-cmtbox">
     <view class="tui-cmt-cell" wx:for="{{cmtList}}" wx:key="{{index}}">
@@ -60,14 +40,14 @@
     </view>
     <view class="tui-operation-right tui-right-flex">
       <!-- 所有评论501 -->
-      <view class="tui-operation-item" hover-class="opcity" hover-stay-time="150" bindtap="cmtAll">
+      <view class="tui-operation-item" hover-class="opcity" hover-stay-time="150" bindtap="btnCmt">
         <tui-icon name="message" size="30" color='#444'></tui-icon>
-        <tui-badge type="white" size="small" tui-badge-class="tui-badge-class">501</tui-badge>
+        <!-- <tui-badge type="white" size="small" tui-badge-class="tui-badge-class">501</tui-badge> -->
       </view>
       <!-- 收藏 -->
-      <view class="tui-operation-item" bindtap="collection">
+      <!-- <view class="tui-operation-item" bindtap="collection">
         <tui-icon name="{{isCollection?'star-fill':'star'}}" size="30" color="{{isCollection?'#5677fc':'#444'}}"></tui-icon>
-      </view>
+      </view> -->
 
       <!-- 分享 -->
       <view class="tui-operation-item" hover-class="opcity" hover-stay-time="150">
