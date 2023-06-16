@@ -13,6 +13,7 @@ page {
   box-sizing: border-box;
   padding: 20rpx 20rpx 0 20rpx;
   position: relative;
+  width: 90%;
 }
 
 .tui-cells::after {

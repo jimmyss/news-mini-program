@@ -80,7 +80,8 @@ page {
 .tui-cmt-title {
   font-size: 30rpx;
   font-weight: bold;
-  position: relative;
+  position: absolute;
+  left: 10px;
 }
 
 .tui-cmt-title::after {

@@ -1,23 +1,22 @@
 <view class="container">
   <view class="header">
     <text class="title">{{title}}</text>
-    <text class="date">{{date}}</text>
+    <text class="date"> {{author}} {{date}}</text>
   </view>
   <image class="picImage" src="{{imagePath}}"></image>
-  <view class="content">
-    <text>{{content}}</text>
+  <view wx:for="{{content}}" class="content">
+    <text>{{item}}</text>
   </view>
 </view>
 
 <view class="bottom-bar">
-  <view class="bottom-icon" bindtap="navigateToPage1">
-    <image class="image" src="/pages/index/images/收藏.png"mode="widthFix"></image>
-  </view>
-  <view class="bottom-icon" bindtap="navigateToPage2" src="">
-    <image class="image" src="/pages/index/images/分享.png"mode="widthFix"></image>
-  </view>
-  <view class="bottom-icon center-icon" bindtap="toComment">
-    <image class="image" src="/pages/index/images/评论.png"mode="widthFix" ></image>
-  </view>
+  <button class="bottom-icon" bindtap="toggleCollect">
+  <image class="image" src="{{ isCollected ? '/pages/index/images/favorite-filled.png' : '/pages/index/images/favorite.png' }}" mode="widthFix"></image>
+</button>
+<button class="bottom-icon" open-type="share">
+  <image class="image" src="/pages/index/images/share.png" mode="widthFix"></image>
+</button>
+<button class="bottom-icon center-icon" bindtap="toggleComment">
+  <image class="image" src="/pages/index/images/comment.png" mode="widthFix"></image>
+</button>
 </view>
-<!-- <tabBar idx="0"></tabBar> -->
