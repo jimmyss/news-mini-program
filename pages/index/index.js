@@ -1,6 +1,7 @@
 // index.js
 Page({
   data: {
+    id: '',
     title: '',       // 新闻标题
     date: '',        // 新闻日期
     url: '',         // 新闻链接
@@ -14,7 +15,7 @@ Page({
   onLoad(options) {
     // 获取 URL 参数
     const params = options;
-    
+    console.log(params.id)
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
       method: 'POST',
@@ -22,12 +23,11 @@ Page({
         'content-type': 'application/json'
       },
       data: {
-        index: params.index,
-        pageNum: params.pageNum,
-        bios: params.bios
+        id: params.id,
       },
       success: (res) => {
         this.setData({
+          id: res.data.news.id || '',
           title: res.data.news.title || '',
           date: res.data.news.time || '',
           url: res.data.news.url || '',
@@ -35,25 +35,31 @@ Page({
           author: res.data.news.author || '',
           content: res.data.content || ''
         });
+        console.log(res.data.news.isCollected)
+        if(res.data.news.isCollected==0){
+          this.setData({
+            isCollected:false
+          });
+        }else{
+          this.setData({
+            isCollected:true
+          });
+        }
       },
       fail: (err) => {
         console.error('点击新闻失败:', err);
       }
     });
   },
-  addFavorite: function () {
+  changeFavorite: function () {
     wx.request({
-      url: 'http://127.0.0.1:3000/api/favorite/add',
+      url: 'http://127.0.0.1:3000/api/favorite/change',
       method: 'POST',
       header: {
         'content-type': 'application/json'
       },
       data: {
-        title: this.data.title,
-        time: this.data.date,
-        picPath: this.data.imagePath,
-        author: this.data.author,
-        url: this.data.url,
+        id: this.data.id,
       }
     })
   },
@@ -61,6 +67,16 @@ Page({
     this.setData({
       isCollected: !this.data.isCollected
     });
+    wx.request({
+      url: 'http://127.0.0.1:3000/api/favorite/change',
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      data: {
+        id: this.data.id,
+      }
+    })
   },
   toggleShare: function() {
     this.setData({

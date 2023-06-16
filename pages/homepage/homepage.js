@@ -183,12 +183,13 @@ Page({
   },
 
   navigateToIndex: function(event) {
-
     const index = event.currentTarget.dataset.index; // 获取点击的新闻序号
     const pageNum=this.data.pageNum;
     const bios=this.data.bios;
     const news = this.data.newsList[index];
     const picPath = news.picPath;
+    const id = ((pageNum-1)*10+bios+index)%80
+    console.log(id)
     // 调用后端接口发送新闻序号
     wx.request({
       url: 'http://127.0.0.1:3000/api/detail',
@@ -197,18 +198,14 @@ Page({
         'content-type': 'application/json'
       },
       data: {
-        index: index,
-        pageNum:pageNum,
-        bios:bios
+        id: id,
       },
       success: (res) => {
         const send=res.data;
         wx.navigateTo({
           url: '/pages/index/index?title=' +
                '&image=' + encodeURIComponent(picPath) +
-               '&index=' + encodeURIComponent(index) + 
-               '&pageNum=' + encodeURIComponent(pageNum) + 
-               '&bios=' + encodeURIComponent(bios)
+               '&id=' + encodeURIComponent(id) 
         });
       },
       fail: (err) => {

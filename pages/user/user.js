@@ -53,7 +53,22 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    const { newsList, pageNum, bios } = this.data;
+    wx.request({
+      url: 'http://127.0.0.1:3000/api/favorite/load',
+      success: res => {
+        const newsData = res.data.news;
+        const pNum=res.data.pageNum;
+        const b=res.data.bios;
+        const n =res.data.num;
+        this.setData({
+          newsList: newsData,
+          pageNum: pNum,
+          bios:b,
+          num:n,
+        });
+      },
+    });
   },
 
   /**
@@ -84,41 +99,50 @@ Page({
 
   navigateToIndex: function(event) {
     const index = event.currentTarget.dataset.index; // 获取点击的新闻序号
-    const pageNum=this.data.pageNum;
-    const bios=this.data.bios;
+    //const pageNum=this.data.pageNum;
+    //const bios=this.data.bios;
     const news = this.data.newsList[index];
+    const id = news.id;
     const picPath = news.picPath;
+    wx.navigateTo({
+      url: '/pages/index/index?title=' +
+        '&image=' + encodeURIComponent(picPath) +
+        '&id=' + encodeURIComponent(id) 
+    });
+    
     // 调用后端接口发送新闻序号
-    wx.request({
+    /*wx.request({
       url: 'http://127.0.0.1:3000/api/detail/favorite',
       method: 'POST',
       header:{
         'content-type': 'application/json'
       },
       data: {
-        index: index,
-        pageNum:pageNum,
-        bios:bios
+         id: this.data.newsList[index].id,
+        //pageNum:pageNum,
+        //bios:bios
       },
       success: (res) => {
         // console.log('点击新闻成功:', res.data);
         const send=res.data;
         const num=index+1
-        // const imagPath="../homepage/images/new"+num+".png";
+        const imagPath="../homepage/images/new"+num+".png";
         console.log(send);
         wx.navigateTo({
-          url: '/pages/index/index?title=' + encodeURIComponent(send.news.title) +
+          url: '/pages/index/index?id='+encodeURIComponent(send.news.id)+
+               '&title=' + encodeURIComponent(send.news.title) +
                '&date=' + encodeURIComponent(send.news.time) +
                '&image=' + encodeURIComponent(picPath) +
                '&author=' + encodeURIComponent(send.news.author) +
                '&url='+ encodeURIComponent(send.news.url) +
-               '&content=' + encodeURIComponent(send.content)
+               '&content=' + encodeURIComponent(send.content)+
+               '&isColleted=' + encodeURIComponent(send.news.isColleted)
         });
       },
       fail: (err) => {
         console.error('点击新闻失败:', err);
       }
-    });
+    });*/
   },
 
   /**
